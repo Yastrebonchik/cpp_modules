@@ -6,12 +6,11 @@
 /*   By: alexander <alexander@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 17:43:53 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/08 22:20:51 by alexander        ###   ########.fr       */
+/*   Updated: 2021/01/08 22:22:46 by alexander        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-//#include <string>
 
 char	*strToUpper(char *str)
 {
