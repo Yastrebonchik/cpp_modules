@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+         #
+#    By: alexander <alexander@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/07 17:38:03 by kcedra            #+#    #+#              #
-#    Updated: 2021/01/07 17:43:41 by kcedra           ###   ########.fr        #
+#    Updated: 2021/01/08 22:19:23 by alexander        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ O_FILES = $(SOURCES:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(O_FILES)
-	$(CC) $(FLAGS) $(O_FILES) -o philo_one
+	$(CC) $(FLAGS) $(O_FILES) -o megaphone
 
 clean:
 	rm -f *.o
