@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alexander <alexander@student.42.fr>        +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 15:54:21 by alexander         #+#    #+#             */
-/*   Updated: 2021/01/09 21:29:16 by alexander        ###   ########.fr       */
+/*   Updated: 2021/01/11 17:00:44 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,12 @@ public:
 	contact();
 	~contact();
 	void		addContact(void);
-	void		getContact(void);
+	void		printUserInfo(void);
+	static void	getContact(contact *phonebook);
 	static int	getContactQuan(void);
-	static void	incContactQuan(void);
 
 private:
+	int			_index;
 	std::string _firstName;
 	std::string _lastName;
 	std::string _nickName;
