@@ -13,10 +13,15 @@
 #include "Zombie.hpp"
 
 
-Zombie::Zombie()
+Zombie::Zombie(std::string type, std::string name) : _type(type), _name(name)
 {
 }
 
 Zombie::~Zombie()
 {
+}
+
+void	Zombie::announce()
+{
+	std::cout << this->_name << " " << this->_type << " Braiiiiiiinnnssss..." << std::endl;
 }

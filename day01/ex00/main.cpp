@@ -11,3 +11,19 @@
 /* ************************************************************************** */
 
 #include "pony.hpp"
+
+int     main()
+{
+    pony ourpony = ponyOnTheStack();
+	pony *competior = ponyOnTheHeap();
+
+	ourpony.setPony("your");
+	competior->setPony("competitor");
+	ourpony.ponyCompete(competior);
+	ourpony.ponyEat();
+	competior->ponyEat();
+	ourpony.ponySleep();
+	competior->ponySleep();
+	delete competior;
+	return (0);
+}

@@ -10,3 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+#include "ZombieEvent.hpp"
+
+int		main()
+{
+	Zombie		*zptr;
+	Zombie		first("Colossal", "Grisha");
+	ZombieEvent	event;
+
+	first.announce();
+	event.setZombieType("Titan");
+	zptr = event.newZombie("Zic");
+	zptr->announce();
+	delete zptr;
+	event.setZombieType("Random type");
+	event.randomChump();
+	return (0);
+}

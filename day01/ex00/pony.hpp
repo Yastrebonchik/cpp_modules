@@ -13,22 +13,27 @@
 #ifndef PONY_HPP
 # define PONY_HPP
 
-#include <iostream>
-#include <string>
+# include <iostream>
+# include <string>
 
 class pony
 {
 public:
-    pony(int height, int age);
+    pony();
     ~pony();
+    void    setPony(std::string pony);
+    void    ponyEat();
+    void    ponySleep();
+    void    ponyCompete(pony *competitor);
 
 private:
     int _height;
     int _age;
-    int _tailLength;
-    std::string _colour;
+    int _maxSpeed;
     std::string _furColour;
-    std::string _eyesColour;
 };
+
+pony    ponyOnTheStack();
+pony    *ponyOnTheHeap();
 
 #endif
