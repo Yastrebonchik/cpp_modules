@@ -5,27 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/11 13:58:36 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/11 13:58:36 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/13 02:52:25 by marvin            #+#    #+#             */
+/*   Updated: 2021/01/13 02:52:25 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-#include "ZombieEvent.hpp"
-#include <ctime>
+#include "ZombieHorde.hpp"
 
 int		main()
 {
-	Zombie		*zptr;
-	Zombie		first("Colossal", "Grisha");
-	ZombieEvent	event;
+	int n;
 
-	first.announce();
-	event.setZombieType("Titan");
-	zptr = event.newZombie("Zic");
-	zptr->announce();
-	delete zptr;
-	event.setZombieType("Random type");
-	event.randomChump();
+	std::cout << "Enter number of zombies you want to create" << std::endl;
+	std::cin >> n;
+	ZombieHorde	newHorde(n);
+	newHorde.announce();
 	return (0);
 }

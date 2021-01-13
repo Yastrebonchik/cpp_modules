@@ -38,8 +38,8 @@ void	ZombieEvent::randomChump()
 	int	rand;
 	std::string const names[6] = {"Marco", "Bertholdt", "Rainer", "Eren", "Falco", "Armin"};
 
+	std::srand(time(0));
 	rand = std::rand() % 6;
-	//std::cout << rand << std::endl;
 	Zombie	newzombie = Zombie(this->_type, names[rand % 6]);
 	newzombie.announce();
 }

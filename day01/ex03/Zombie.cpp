@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/11 13:58:36 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/11 13:58:36 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/11 13:57:52 by marvin            #+#    #+#             */
+/*   Updated: 2021/01/11 13:57:52 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-#include "ZombieEvent.hpp"
-#include <ctime>
 
-int		main()
+
+Zombie::Zombie()
 {
-	Zombie		*zptr;
-	Zombie		first("Colossal", "Grisha");
-	ZombieEvent	event;
+}
 
-	first.announce();
-	event.setZombieType("Titan");
-	zptr = event.newZombie("Zic");
-	zptr->announce();
-	delete zptr;
-	event.setZombieType("Random type");
-	event.randomChump();
-	return (0);
+Zombie::~Zombie()
+{
+}
+
+void	Zombie::setZombie(std::string type, std::string name)
+{
+	this->_type = type;
+	this->_name = name;
+}
+
+void	Zombie::announce()
+{
+	std::cout << this->_name << " " << this->_type << " Braiiiiiiinnnssss..." << std::endl;
 }

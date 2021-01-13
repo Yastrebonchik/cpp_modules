@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/11 13:58:36 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/11 13:58:36 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/12 23:33:54 by marvin            #+#    #+#             */
+/*   Updated: 2021/01/12 23:33:54 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-#include "ZombieEvent.hpp"
-#include <ctime>
 
-int		main()
+class ZombieHorde
 {
-	Zombie		*zptr;
-	Zombie		first("Colossal", "Grisha");
-	ZombieEvent	event;
+public:
+	ZombieHorde(int n);
+	~ZombieHorde();
+	void	announce();
 
-	first.announce();
-	event.setZombieType("Titan");
-	zptr = event.newZombie("Zic");
-	zptr->announce();
-	delete zptr;
-	event.setZombieType("Random type");
-	event.randomChump();
-	return (0);
-}
+private:
+	int 		_zombieQuan;
+	Zombie*		_zHordePtr;
+};
