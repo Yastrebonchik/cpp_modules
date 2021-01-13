@@ -20,11 +20,11 @@ class Human
 public:
 	Human();
 	~Human();
-	Brain const	&getBrain();
-	std::string	identify();
+	Brain const & getBrain();
+	std::string identify() const;
 
 private:
-	Brain const	_brain;
+	Brain const _brain;
 };
 	
 #endif

@@ -23,10 +23,9 @@ class Brain
 public:
 	Brain();
 	~Brain();
-	std::string	const identify();
-
+	std::string identify() const;
 private:
-	int	_mass;
+
 };
 
 #endif

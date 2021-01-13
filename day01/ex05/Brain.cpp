@@ -20,10 +20,11 @@ Brain::~Brain()
 {
 }
 
-std::string	const Brain::identify()
+std::string	Brain::identify() const 
 {
-	std::stringstream	stream;
+	//unsigned long int const	value = (unsigned long int)this;
+	std::stringstream		stream;
 
-	stream << "0x" << std::uppercase << std::hex << (const unsigned long int)this;
+	stream << std::uppercase << std::hex << this;
 	return (stream.str());
 }
