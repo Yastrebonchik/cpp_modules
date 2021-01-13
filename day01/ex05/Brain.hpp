@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/11 00:19:44 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/11 00:19:44 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/13 14:13:05 by marvin            #+#    #+#             */
+/*   Updated: 2021/01/13 14:13:05 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pony.hpp"
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-int     main()
+# include <iostream>
+# include <string>
+# include <sstream>
+# include <ctime>
+
+class Brain
 {
-    Pony ourpony = ponyOnTheStack();
-	Pony *competior = ponyOnTheHeap();
+public:
+	Brain();
+	~Brain();
+	std::string	const identify();
 
-	ourpony.setPony("your");
-	competior->setPony("competitor");
-	ourpony.ponyCompete(competior);
-	ourpony.ponyEat();
-	competior->ponyEat();
-	ourpony.ponySleep();
-	competior->ponySleep();
-	delete competior;
-	return (0);
-}
+private:
+	int	_mass;
+};
+
+#endif

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pony.hpp                                           :+:      :+:    :+:   */
+/*   Pony.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -16,15 +16,15 @@
 # include <iostream>
 # include <string>
 
-class pony
+class Pony
 {
 public:
-    pony();
-    ~pony();
-    void    setPony(std::string pony);
+    Pony();
+    ~Pony();
+    void    setPony(std::string Pony);
     void    ponyEat();
     void    ponySleep();
-    void    ponyCompete(pony *competitor);
+    void    ponyCompete(Pony *competitor);
 
 private:
     int _height;
@@ -33,7 +33,7 @@ private:
     std::string _furColour;
 };
 
-pony    ponyOnTheStack();
-pony    *ponyOnTheHeap();
+Pony    ponyOnTheStack();
+Pony    *ponyOnTheHeap();
 
 #endif

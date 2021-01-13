@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Human.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/11 00:19:44 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/11 00:19:44 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/13 14:57:28 by marvin            #+#    #+#             */
+/*   Updated: 2021/01/13 14:57:28 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pony.hpp"
+#include "Human.hpp"
 
-int     main()
+Human::Human()
 {
-    Pony ourpony = ponyOnTheStack();
-	Pony *competior = ponyOnTheHeap();
+}
 
-	ourpony.setPony("your");
-	competior->setPony("competitor");
-	ourpony.ponyCompete(competior);
-	ourpony.ponyEat();
-	competior->ponyEat();
-	ourpony.ponySleep();
-	competior->ponySleep();
-	delete competior;
-	return (0);
+Human::~Human()
+{
+}
+
+Brain const & 	Human::getBrain()
+{
+	return (this->_brain);
+}
+
+std::string		Human::identify()
+{
+	return (this->_brain.identify());
 }
