@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.cpp                                          :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/13 14:12:52 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/13 14:12:52 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/13 17:06:58 by marvin            #+#    #+#             */
+/*   Updated: 2021/01/13 17:06:58 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Brain.hpp"
+#include "Weapon.hpp"
 
-Brain::Brain()
+Weapon::Weapon(std::string type) : _type(type)
 {
+	std::cout << "Weapon " << _type << " created" << std::endl;
 }
 
-Brain::~Brain()
+Weapon::~Weapon()
 {
+	std::cout << "Weapon destroyed" << std::endl;
 }
 
-std::string	Brain::identify() const 
+std::string &	Weapon::getType()
 {
-	std::stringstream		stream;
+	std::string &ref = _type;
+	return (ref);
+}
 
-	stream << this;
-	return (stream.str());
+void				Weapon::setType(std::string type)
+{
+	this->_type = type;
 }

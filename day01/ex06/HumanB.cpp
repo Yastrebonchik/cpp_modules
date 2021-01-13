@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.cpp                                          :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/13 14:12:52 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/13 14:12:52 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/13 17:16:25 by marvin            #+#    #+#             */
+/*   Updated: 2021/01/13 17:16:25 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Brain.hpp"
+# include "HumanB.hpp"
 
-Brain::Brain()
+HumanB::HumanB(std::string name) : _name(name)
 {
 }
 
-Brain::~Brain()
+HumanB::~HumanB()
 {
 }
 
-std::string	Brain::identify() const 
+void	HumanB::attack()
 {
-	std::stringstream		stream;
+	std::cout << this->_name << " attacks with his " << this->_weapon->getType() << std::endl;
+}
 
-	stream << this;
-	return (stream.str());
+void	HumanB::setWeapon(Weapon humanweapon)
+{
+	this->_weapon = &humanweapon;
 }

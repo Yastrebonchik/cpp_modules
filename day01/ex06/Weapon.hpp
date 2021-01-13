@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.cpp                                          :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/13 14:12:52 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/13 14:12:52 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/13 17:07:06 by marvin            #+#    #+#             */
+/*   Updated: 2021/01/13 17:07:06 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Brain.hpp"
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
-Brain::Brain()
+#include <iostream>
+#include <string>
+
+class Weapon
 {
-}
+public:
+	Weapon(std::string type);
+	~Weapon();
+	void				setType(std::string type);
+	std::string &		getType();
 
-Brain::~Brain()
-{
-}
+private:
+	std::string	_type;
+};
 
-std::string	Brain::identify() const 
-{
-	std::stringstream		stream;
-
-	stream << this;
-	return (stream.str());
-}
+#endif
