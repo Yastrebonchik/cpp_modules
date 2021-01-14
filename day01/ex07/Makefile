@@ -18,7 +18,7 @@ HEADER = sed.h
 
 FLAGS = -Wall -Werror -Wextra
 
-SOURCES = main.cpp contact.cpp
+SOURCES = main.cpp
 
 O_FILES = $(SOURCES:.cpp=.o)
 
