@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: alexander <alexander@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 23:35:14 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/13 23:35:14 by marvin           ###   ########.fr       */
+/*   Updated: 2021/01/14 04:13:27 by alexander        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,16 @@ int					main(int argc, char **argv)
 	std::ofstream	output;
 	std::string		line;
 	std::string		newfile;
-	std::string		lines[3] = {argv[1], argv[2], argv[3]};
-
+	std::string		lines[3];
 
 	if (argc != 4)
 	{
 		std::cout << "Wrong number of arguments!" << std::endl;
 		return (0);
 	}
+	lines[0] = argv[1];
+	lines[1] = argv[2]; 
+	lines[2] = argv[3];
 	if (lines[0].length() == 0 || lines[1].length() == 0 || lines[2].length() == 0)
 	{
 		std::cout << "Wrong arguments!" << std::endl;
@@ -60,7 +62,7 @@ int					main(int argc, char **argv)
 	output.open(newfile);
 	if (input.is_open() == 0 || output.is_open() == 0)
 	{
-		std::cout << "Error opening file occured" << std::endl;
+		std::cout << "File error occured" << std::endl;
 		return (0);
 	}
 	else
