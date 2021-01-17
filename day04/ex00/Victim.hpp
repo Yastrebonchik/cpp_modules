@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Victim.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/16 13:42:55 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/16 13:42:55 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/17 15:07:53 by marvin            #+#    #+#             */
+/*   Updated: 2021/01/17 15:07:53 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef VICTIM_HPP
+# define VICTIM_HPP
 
-# include "ClapTrap.hpp"
 # include <iostream>
 # include <string>
-# include <ctime>
 
-class FragTrap : virtual public ClapTrap
+class Victim
 {
-public:
-	FragTrap(std::string name);
-	FragTrap(FragTrap const &src);
-	virtual		~FragTrap();
-	FragTrap&	operator=(const FragTrap& rhs);
-
-	void			vaulthunter_dot_exe(std::string const & target);
-	virtual void	rangedAttack(std::string const & target);
-	virtual void	meleeAttack(std::string const & target);
 private:
-	FragTrap();
+	Victim();
+
+protected:
+	std::string	_name;
+
+public:
+	Victim(std::string name);
+	Victim(const Victim &src);
+	~Victim();
+
+	Victim&	operator=(const Victim& rhs);
+
+	std::string	getName(void) const;
+
+	virtual void getPolymorphed() const;
 };
+
+std::ostream &operator<<(std::ostream &out, const Victim &src);
 
 #endif

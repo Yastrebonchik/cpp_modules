@@ -31,6 +31,7 @@ public:
 	void			beRepaired(unsigned int amount);
 
 protected:
+	ClapTrap();
 	std::string	_name;
 	int			_hitPoints;
 	int			_energyPoints;

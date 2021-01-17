@@ -31,7 +31,7 @@ public:
 	void	meleeAttack(std::string const & target);
 
 private:
-	
+	SuperTrap();
 };
 
 #endif

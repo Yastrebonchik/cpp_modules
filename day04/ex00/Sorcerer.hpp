@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Sorcerer.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/16 13:42:55 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/16 13:42:55 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/17 14:23:55 by marvin            #+#    #+#             */
+/*   Updated: 2021/01/17 14:23:55 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef SORCERER_HPP
+# define SORCERER_HPP
 
-# include "ClapTrap.hpp"
+# include "Victim.hpp"
 # include <iostream>
 # include <string>
-# include <ctime>
 
-class FragTrap : virtual public ClapTrap
+class Sorcerer
 {
-public:
-	FragTrap(std::string name);
-	FragTrap(FragTrap const &src);
-	virtual		~FragTrap();
-	FragTrap&	operator=(const FragTrap& rhs);
-
-	void			vaulthunter_dot_exe(std::string const & target);
-	virtual void	rangedAttack(std::string const & target);
-	virtual void	meleeAttack(std::string const & target);
 private:
-	FragTrap();
+	Sorcerer();
+
+	std::string	_name;
+	std::string	_title;
+public:
+	Sorcerer(std::string name, std::string title);
+	Sorcerer(const Sorcerer &src);
+	~Sorcerer();
+
+	Sorcerer&	operator=(const Sorcerer& rhs);
+
+	std::string	getName(void) const;
+	std::string	getTitle(void) const;
+
+	void polymorph(Victim const &src) const;
 };
+
+std::ostream &operator<<(std::ostream &out, const Sorcerer &src);
 
 #endif

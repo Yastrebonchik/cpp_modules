@@ -32,6 +32,7 @@ public:
 	std::string		getName(void) const;
 
 protected:
+	ClapTrap();
 	std::string	_name;
 	int			_hitPoints;
 	int			_energyPoints;

@@ -32,6 +32,7 @@ public:
 	void		beRepaired(unsigned int amount);
 
 private:
+	FragTrap();
 	std::string			_name;
 	int					_hitPoints;
 	int					_energyPoints;

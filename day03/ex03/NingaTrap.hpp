@@ -33,6 +33,7 @@ public:
 	void	ninjaShoebox(NinjaTrap& rhs);
 
 private:
+	NinjaTrap();
 };
 
 #endif

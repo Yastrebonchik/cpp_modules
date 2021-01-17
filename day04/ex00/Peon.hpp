@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Peon.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/16 13:42:55 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/16 13:42:55 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/17 15:44:12 by marvin            #+#    #+#             */
+/*   Updated: 2021/01/17 15:44:12 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef PEON_HPP
+# define PEON_HPP
 
-# include "ClapTrap.hpp"
 # include <iostream>
 # include <string>
-# include <ctime>
+# include "Sorcerer.hpp"
 
-class FragTrap : virtual public ClapTrap
+class Peon : public Victim
 {
-public:
-	FragTrap(std::string name);
-	FragTrap(FragTrap const &src);
-	virtual		~FragTrap();
-	FragTrap&	operator=(const FragTrap& rhs);
-
-	void			vaulthunter_dot_exe(std::string const & target);
-	virtual void	rangedAttack(std::string const & target);
-	virtual void	meleeAttack(std::string const & target);
 private:
-	FragTrap();
+	Peon();
+
+public:
+	Peon(std::string name);
+	Peon(const Peon &src);
+	~Peon();
+
+	Peon&	operator=(const Peon& rhs);
+
+	std::string	getName(void) const;
+
+	void getPolymorphed() const;
 };
+
+std::ostream &operator<<(std::ostream &out, const Peon &src);
 
 #endif
