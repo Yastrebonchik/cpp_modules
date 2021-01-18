@@ -24,6 +24,17 @@ Character::~Character()
 {
 }
 
+Character&	Character::operator=(const Character &rhs)
+{
+	if (this != &rhs)
+	{
+		this->_name = rhs._name;
+		this->_AP = rhs._AP;
+		this->_weapon = rhs._weapon;
+	}
+	return (*this);
+}
+
 std::string	Character::getName(void) const
 {
 	return (this->_name);
