@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 15:54:18 by alexander         #+#    #+#             */
-/*   Updated: 2021/01/11 17:10:25 by marvin           ###   ########.fr       */
+/*   Updated: 2021/01/20 16:04:52 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void 		contact::addContact(void)
 	std::cout << "Type underwear colour" << std::endl;
 	std::cin >> this->_underwearColour;
 	std::cout << "Type darkest secret" << std::endl;
-	std::cin >> this->_darkesSecret;
+	std::cin >> this->_darkestSecret;
 	contact::_contactQuan++;
 }
 
@@ -65,7 +65,7 @@ void	contact::printUserInfo(void)
 	std::cout << "Birthday date    : " << this->_birthdayDate <<  std::endl;
 	std::cout << "Favorite meal    : " << this->_favoriteMeal <<  std::endl;
 	std::cout << "Underwear colour : " << this->_underwearColour <<  std::endl;
-	std::cout << "darkest secret   : " << this->_darkesSecret <<  std::endl;
+	std::cout << "darkest secret   : " << this->_darkestSecret <<  std::endl;
 }
 
 static void	printElement(int i, std::string str1, std::string str2, std::string str3)

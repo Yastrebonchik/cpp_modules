@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 15:54:21 by alexander         #+#    #+#             */
-/*   Updated: 2021/01/11 17:00:44 by marvin           ###   ########.fr       */
+/*   Updated: 2021/01/20 16:04:54 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ private:
 	std::string _birthdayDate;
 	std::string _favoriteMeal;
 	std::string _underwearColour;
-	std::string _darkesSecret;
+	std::string _darkestSecret;
 	static int	_contactQuan;
 };
 

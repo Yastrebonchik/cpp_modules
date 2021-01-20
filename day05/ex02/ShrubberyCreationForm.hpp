@@ -23,7 +23,7 @@ class ShrubberyCreationForm : public Form
 private:
 	ShrubberyCreationForm();
 	std::string	const _target;
-	static const std::string trees[3];
+	static const std::string _trees[3];
 
 public:
 	ShrubberyCreationForm(const std::string &target);

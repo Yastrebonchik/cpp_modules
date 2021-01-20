@@ -15,6 +15,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
 int		main()
 {
@@ -40,5 +41,22 @@ int		main()
 
 	yoshimura.signForm(*president);
 	yoshimura.executeForm(*president);
+
+	Intern	randomIntern;
+
+	Form*	newform =  randomIntern.makeForm("Shrubbery creation", "home");
+
+	yoshimura.signForm(*newform);
+	yoshimura.executeForm(*newform);
+
+	try
+	{
+		randomIntern.makeForm("some unknown form", "bob");
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
 	return (0);
 }

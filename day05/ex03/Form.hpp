@@ -30,7 +30,7 @@ private:
 public:
 	Form(std::string name, int signGrade, int execGrade);
 	Form(const Form &src);
-	~Form();
+	virtual ~Form();
 
 	Form&	operator=(const Form &src);
 

@@ -12,7 +12,7 @@
 
 #include "ShrubberyCreationForm.hpp"
 
-std::string	const	ShrubberyCreationForm::trees[3] = 
+std::string	const	ShrubberyCreationForm::_trees[3] = 
 {
 "             /\\				\n" \
 "            <  >				\n" \
@@ -99,7 +99,7 @@ void					ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 	output.open(newfile);
 	if (output.is_open() == 0)
 		throw Form::FileOpenException();
-	output << ShrubberyCreationForm::trees[0] << std::endl << std::endl;
-	output << ShrubberyCreationForm::trees[1] << std::endl << std::endl;
-	output << ShrubberyCreationForm::trees[2];
+	output << ShrubberyCreationForm::_trees[0] << std::endl << std::endl;
+	output << ShrubberyCreationForm::_trees[1] << std::endl << std::endl;
+	output << ShrubberyCreationForm::_trees[2];
 }
