@@ -18,10 +18,7 @@ Character::Character(std::string name) : _name(name)
 
 	i = 0;
 	while(i < 4)
-	{
-		_inventory[i] = nullptr;
-		i++;
-	}
+		_inventory[i++] = nullptr;
 }
 
 Character::Character(const Character &src) : _name(src.getName())
@@ -29,15 +26,28 @@ Character::Character(const Character &src) : _name(src.getName())
 	int i;
 
 	i = 0;
+	while(i < 4)
+	{
+		if (this->_inventory[i] != nullptr)
+			delete this->_inventory[i];
+		this->_inventory[i++] = nullptr;
+	}
+	i = 0;
 	while (i < 4)
-		this->_inventory[i] = src._inventory[i++];
+		this->equip(src._inventory[i]->clone());
 }
 
 Character::~Character()
 {
 	int i;
 
-	delete this->_inventory;
+	i = 0;
+	while(i < 4)
+	{
+		if (this->_inventory[i] != nullptr)
+			delete this->_inventory[i];
+		this->_inventory[i++] = nullptr;
+	}
 }
 
 Character&			Character::operator=(const Character &rhs)
@@ -46,9 +56,17 @@ Character&			Character::operator=(const Character &rhs)
 
 	if (this != &rhs)
 	{
+		i = 0;
+		while(i < 4)
+		{
+			if (this->_inventory[i] != nullptr)
+				delete this->_inventory[i];
+			this->_inventory[i++] = nullptr;
+		}
+		i = 0;
 		this->_name = rhs._name;
 		while(i < 4)
-			this->_inventory[i] = rhs._inventory[i++];
+			this->equip(rhs._inventory[i++]->clone());
 	}
 	return (*this);
 }
@@ -63,10 +81,17 @@ void 				Character::equip(AMateria* m)
 	int i;
 
 	i = 0;
-	while(i < 4)
+	if (m != nullptr)
 	{
-		if (this->_inventory[i] != nullptr);
-			this->_inventory[i] = m;
+		while(i < 4)
+		{
+			if (this->_inventory[i] == nullptr)
+			{
+				this->_inventory[i] = m;
+				break ;
+			}
+			i++;
+		}
 	}
 }
 

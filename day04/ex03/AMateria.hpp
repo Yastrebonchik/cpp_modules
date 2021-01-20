@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+class AMateria;
 # include "ICharacter.hpp"
 
 class AMateria
@@ -23,8 +24,8 @@ private:
 	AMateria();
 
 protected:
-	unsigned int	_xp;
 	std::string		_type;
+	unsigned int	_xp;
 
 public:
 	AMateria(std::string const & type);
