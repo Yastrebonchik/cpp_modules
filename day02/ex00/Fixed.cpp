@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/15 01:22:05 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/15 01:22:05 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/15 01:22:05 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/22 16:17:59 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed() : _value(0)
+Fixed::Fixed() : _raw(0)
 {
 	std::cout << "Default constructor called" << std::endl;
 }
@@ -31,12 +31,12 @@ Fixed::~Fixed()
 int 	Fixed::getRawBits(void) const
 {
 	std::cout << "GetRawBits member function called" << std::endl;
-	return (this->_value);
+	return (this->_raw);
 }
 
 void 	Fixed::setRawBits(int const raw)
 {
-	this->_value = raw;
+	this->_raw = raw;
 }
 
 Fixed&	Fixed::operator=(const Fixed& rhs)
@@ -46,5 +46,5 @@ Fixed&	Fixed::operator=(const Fixed& rhs)
 	if ( this != &rhs)
 		this->setRawBits(rhs.getRawBits());
 	
-	return *this;
+	return (*this);
 }

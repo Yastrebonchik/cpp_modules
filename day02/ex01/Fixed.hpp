@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/15 00:22:12 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/15 00:22:12 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/15 00:22:12 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/22 16:26:06 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ public:
 	Fixed&	operator=(const Fixed& rhs);
 
 private:
-	int					_value;
+	int					_raw;
 	static const int	_literal = 8;
 };
 

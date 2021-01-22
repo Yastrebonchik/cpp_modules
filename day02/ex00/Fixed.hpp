@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/15 00:22:12 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/15 00:22:12 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/15 00:22:12 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/22 19:11:48 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	void 	setRawBits( int const raw);
 
 private:
-	int					_value;
+	int					_raw;
 	static const int	_literal = 8;
 };
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   convert.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/20 23:50:26 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/20 23:50:26 by marvin           ###   ########.fr       */
+/*   Updated: 2021/01/22 20:31:34 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ int		main(int argc, char **argv)
 		std::cout << "Error: wrong number of arguments" << std::endl;
 	else
 	{
+		//if ()
 		value = std::strtod(argv[1], nullptr);
 		printChar(value);
 		printInt(value);
