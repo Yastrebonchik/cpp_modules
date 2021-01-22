@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/11 00:19:44 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/11 00:19:44 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/11 00:19:44 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/22 15:25:33 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int     main()
 {
-    Pony ourpony = ponyOnTheStack();
 	Pony *competior = ponyOnTheHeap();
+    Pony ourpony = ponyOnTheStack();
 
 	ourpony.setPony("your");
 	competior->setPony("competitor");

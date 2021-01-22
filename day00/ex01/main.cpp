@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 15:54:23 by alexander         #+#    #+#             */
-/*   Updated: 2021/01/11 17:01:23 by marvin           ###   ########.fr       */
+/*   Updated: 2021/01/21 19:40:34 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,12 @@ int		main()
 		{
 			contactQuan = contact::getContactQuan();
 			if (contactQuan >= 8)
-				std::cout << "Can't increment more, bitch" << std::endl;
+				std::cout << "Can't add more contacts" << std::endl;
 			else
 				phonebook[contactQuan].addContact();
 		}
 		else if (command.compare("SEARCH") == 0)
-		{
 			contact::getContact(phonebook);
-		}
 	}
 	return (0);
 }

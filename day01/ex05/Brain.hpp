@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/13 14:13:05 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/13 14:13:05 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/13 14:13:05 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/22 15:26:30 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ public:
 	Brain();
 	~Brain();
 	std::string identify() const;
-private:
+	int			getBrainMass() const;
 
+private:
+	int	_mass;
 };
 
 #endif

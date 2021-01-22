@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 15:54:18 by alexander         #+#    #+#             */
-/*   Updated: 2021/01/20 16:04:52 by marvin           ###   ########.fr       */
+/*   Updated: 2021/01/21 19:47:47 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,7 @@ void		contact::getContact(contact *phonebook)
 {
 	int			i;
 	int			number;
+	std::string	numb;
 	int	const	contactQuan = contact::getContactQuan();
 	std::string	last(45, '-');
 
@@ -135,14 +136,15 @@ void		contact::getContact(contact *phonebook)
 		std::cout << "Type number from 1 to " << contactQuan << std::endl;
 		while (1)
 		{
-			std::cin >> number;
-			if (number > contactQuan || number < 1)
-				std::cout << "Invalid number" << std::endl;
-			else
+			std::cin >> numb;
+			number = std::atoi(numb.c_str());
+			if (number >= 1 && number <= contactQuan)
 			{
 				phonebook[number - 1].printUserInfo();
 				break ;
 			}
+			else
+				std::cout << "Invalid number" << std::endl;
 		}
 	}
 }

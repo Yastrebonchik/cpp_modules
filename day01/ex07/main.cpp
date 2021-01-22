@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alexander <alexander@student.42.fr>        +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/13 23:35:14 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/14 04:13:27 by alexander        ###   ########.fr       */
+/*   Created: 2021/01/13 23:35:14 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/22 15:58:28 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,13 @@ int					main(int argc, char **argv)
 	}
 	newfile = argv[1] + (std::string)".replace";
 	input.open(argv[1], std::fstream::in);
+	if (input.is_open() == 0)
+	{
+		std::cout << "File error occured" << std::endl;
+		return (0);
+	}
 	output.open(newfile);
-	if (input.is_open() == 0 || output.is_open() == 0)
+	if (output.is_open() == 0)
 	{
 		std::cout << "File error occured" << std::endl;
 		return (0);

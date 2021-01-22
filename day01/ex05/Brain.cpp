@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/13 14:12:52 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/13 14:12:52 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/13 14:12:52 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/22 15:26:27 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Brain::Brain()
 {
+	this->_mass = std::rand() % 900 + 1100;
 }
 
 Brain::~Brain()
@@ -26,4 +27,9 @@ std::string	Brain::identify() const
 
 	stream << this;
 	return (stream.str());
+}
+
+int			Brain::getBrainMass() const
+{
+	return (this->_mass);
 }

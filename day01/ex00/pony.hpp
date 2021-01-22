@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   pony.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/11 00:19:48 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/11 00:19:48 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/11 00:19:48 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/22 15:25:39 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,8 @@ public:
     void    ponyCompete(Pony *competitor);
 
 private:
-    int _height;
-    int _age;
     int _maxSpeed;
-    std::string _furColour;
+    std::string _name;
 };
 
 Pony    ponyOnTheStack();

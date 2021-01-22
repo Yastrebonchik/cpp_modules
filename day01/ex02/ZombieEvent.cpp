@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ZombieEvent.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/11 13:58:13 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/11 13:58:13 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/11 13:58:13 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/22 15:25:57 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Zombie*	ZombieEvent::newZombie(std::string name)
 void	ZombieEvent::randomChump()
 {
 	int	rand;
-	std::string const names[6] = {"Marco", "Bertholdt", "Rainer", "Eren", "Falco", "Armin"};
+	std::string const names[6] = {"Foster", "Garold", "Steve", "John", "Falco", "Armin"};
 
 	std::srand(time(0));
 	rand = std::rand() % 6;

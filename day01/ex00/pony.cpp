@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.cpp                                           :+:      :+:    :+:   */
+/*   pony.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/11 00:19:09 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/11 00:19:09 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/11 00:19:09 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/22 15:25:37 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,18 @@ Pony::Pony()
 
 Pony::~Pony()
 {
+	std::cout << "Pony " << this->_name << " died :(" << std::endl;
 }
 
 void    Pony::setPony(std::string Pony)
 {
-	std::cout << "Type " << Pony << " Pony height" << std::endl;
-	std::cin >> this->_height;
-	std::cout << "Type Pony age" << std::endl;
-	std::cin >> this->_age;
+	std::string	param;
+
+	std::cout << "Type " << Pony << " Pony name" << std::endl;
+	std::cin >> this->_name;
 	std::cout << "Type Pony max speed in km/h" << std::endl;
-	std::cin >> this->_maxSpeed;
-	std::cout << "Type Pony fur colour" << std::endl;
-	std::cin >> this->_furColour;
+	std::cin >> param;
+	this->_maxSpeed = std::atoi(param.c_str());
 }
 
 void    Pony::ponyEat()
