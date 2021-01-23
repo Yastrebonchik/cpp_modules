@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/17 01:33:13 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/23 19:36:21 by kcedra           ###   ########.fr       */
+/*   Created: 2021/01/17 01:33:13 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/23 21:09:22 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,13 @@ SuperTrap::SuperTrap(std::string name) : ClapTrap(name), NinjaTrap(name), FragTr
 {
 	std::cout << "SuperTrap summoned!" << std::endl;
 	this->_level = 1;
-	this->_hitPoints = FragTrap::_hitPoints;
-	std::cout << FragTrap::_hitPoints << std::endl;
-	this->_maxHitPoints = FragTrap::_maxHitPoints;
-	this->_energyPoints = NinjaTrap::_energyPoints;
-	this->_maxEnergyPoints = NinjaTrap::_maxEnergyPoints;
-	this->_meleeAttackDamage = NinjaTrap::_meleeAttackDamage;
-	this->_rangedAttackDamage = FragTrap::_rangedAttackDamage;
-	this->_armorDamageReduction = FragTrap::_armorDamageReduction;
+	this->_hitPoints = 100;
+	this->_maxHitPoints = 100;
+	this->_energyPoints = 120;
+	this->_maxEnergyPoints = 120;
+	this->_meleeAttackDamage = 60;
+	this->_rangedAttackDamage = 20;
+	this->_armorDamageReduction = 5;
 }
 
 SuperTrap::SuperTrap(const SuperTrap &src) : ClapTrap(src), NinjaTrap(src), FragTrap(src)

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/16 13:42:55 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/23 19:29:59 by kcedra           ###   ########.fr       */
+/*   Created: 2021/01/16 13:42:55 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/23 21:08:35 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,10 @@ public:
 	virtual		~FragTrap();
 	FragTrap&	operator=(const FragTrap& rhs);
 
-	void			vaulthunter_dot_exe(std::string const & target);
 	virtual void	rangedAttack(std::string const & target);
 	virtual void	meleeAttack(std::string const & target);
+	void			vaulthunter_dot_exe(std::string const & target);
+	
 private:
 	FragTrap();
 };

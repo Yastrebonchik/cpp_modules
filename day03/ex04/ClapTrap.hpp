@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/16 17:05:57 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/23 19:03:42 by kcedra           ###   ########.fr       */
+/*   Created: 2021/01/16 17:05:57 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/23 21:09:36 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	ClapTrap&	operator=(const ClapTrap& rhs);
 
 	virtual void	rangedAttack(std::string const & target);
-	virtual	void	meleeAttack(std::string const & target);
+	virtual void	meleeAttack(std::string const & target);
 	void			takeDamage(unsigned int amount);
 	void			beRepaired(unsigned int amount);
 	int				getHP();
