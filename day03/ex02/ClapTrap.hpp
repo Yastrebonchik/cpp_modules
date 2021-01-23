@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/16 17:05:57 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/16 17:05:57 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/16 17:05:57 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/23 17:51:22 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ public:
 	virtual	void	meleeAttack(std::string const & target);
 	void			takeDamage(unsigned int amount);
 	void			beRepaired(unsigned int amount);
+	int				getHP();
+	int				getEnergyPoints();
 
 protected:
 	ClapTrap();

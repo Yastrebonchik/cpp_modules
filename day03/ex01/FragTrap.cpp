@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/16 13:43:28 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/16 13:43:28 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/16 13:43:28 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/23 15:23:53 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	FragTrap::beRepaired(unsigned int amount)
 	int hp;
 
 	std::cout << "FR4G-TP " << this->_name << " : ";
-	std::cout << "Good as new, I think. Am I leaking" << std::endl;
+	std::cout << "Good as new, I think. Am I leaking?" << std::endl;
 	hp = this->_hitPoints + (int)amount;
 	if (hp > this->_maxHitPoints)
 		hp = this->_maxHitPoints;
@@ -89,8 +89,18 @@ void	FragTrap::vaulthunter_dot_exe(std::string const & target)
 		this->_energyPoints -= 25;
 		std::cout << quotes[std::rand() % 5] << " : ";
 		std::cout << "FR4G-TP " << this->_name << " attacks " << target;
-		std::cout << " at melee, causing " <<  this->_meleeAttackDamage << " points of damage!" << std::endl;
+		std::cout << " at melee, causing " << std::rand() % this->_meleeAttackDamage << " points of damage!" << std::endl;
 	}
 	else
 		std::cout << "Can't do it, i'm out of energy..." << std::endl;
+}
+
+int		FragTrap::getHP()
+{
+	return (this->_hitPoints);
+}
+
+int		FragTrap::getEnergyPoints()
+{
+	return (this->_energyPoints);
 }

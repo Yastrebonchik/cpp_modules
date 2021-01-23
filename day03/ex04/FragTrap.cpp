@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/16 13:43:28 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/16 13:43:28 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/16 13:43:28 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/23 19:38:31 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,21 @@
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
+	// this->_name = name;
+	// this->_maxHitPoints = 100;
+	// this->_maxEnergyPoints = 100;
+	// this->_hitPoints = 100;
+	// this->_energyPoints = 100;
+	// this->_level = 1;
+	// this->_meleeAttackDamage = 30;
+	// this->_rangedAttackDamage = 20;
+	// this->_armorDamageReduction = 5;
 	std::cout << "Aaaaand... OPEN!" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &src) : ClapTrap(src)
 {
+	*this = src;
 	std::cout << "Aaaaand... OPEN!" << std::endl;
 }
 

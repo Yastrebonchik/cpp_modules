@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/16 17:06:28 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/16 17:06:28 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/16 17:06:28 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/23 17:51:19 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ ClapTrap::ClapTrap(std::string name)
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_level = 1;
-	this->_meleeAttackDamage = 30;
-	this->_rangedAttackDamage = 20;
-	this->_armorDamageReduction = 5;
+	this->_meleeAttackDamage = 25;
+	this->_rangedAttackDamage = 23;
+	this->_armorDamageReduction = 2;
 	std::cout << "ClapTrap summoned!" << std::endl;
 }
 
@@ -33,7 +33,7 @@ ClapTrap::ClapTrap(const ClapTrap &src) : _name(src._name), _hitPoints(src._hitP
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "I can see through time..." << std::endl;
+	std::cout << this->_name << " : I can see through time..." << std::endl;
 }
 
 ClapTrap&	ClapTrap::operator=(const ClapTrap& rhs)
@@ -83,4 +83,14 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	if (hp > this->_maxHitPoints)
 		hp = this->_maxHitPoints;
 	this->_hitPoints = hp;
+}
+
+int		ClapTrap::getHP()
+{
+	return (this->_hitPoints);
+}
+
+int		ClapTrap::getEnergyPoints()
+{
+	return (this->_energyPoints);
 }

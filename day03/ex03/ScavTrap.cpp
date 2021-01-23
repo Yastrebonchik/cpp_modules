@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/16 16:28:44 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/16 16:28:44 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/16 16:28:44 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/23 18:05:53 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,27 @@
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
+	this->_name = name;
+	this->_maxHitPoints = 100;
 	this->_maxEnergyPoints = 50;
+	this->_hitPoints = 100;
+	this->_energyPoints = 100;
+	this->_level = 1;
 	this->_meleeAttackDamage = 20;
 	this->_rangedAttackDamage = 15;
 	this->_armorDamageReduction = 5;
-	std::cout << "This time it'll be awesome, I promise!" << std::endl;
+	std::cout << "This time I'll be awesome, I promise!" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &src) : ClapTrap(src)
 {
-	std::cout << "This time it'll be awesome, I promise!" << std::endl;
+	*this = src;
+	std::cout << "This time I'll be awesome, I promise!" << std::endl;
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "My servos... are seizing..." << std::endl;
+	std::cout << this->_name << " : My servos... are seizing..." << std::endl;
 }
 
 ScavTrap&	ScavTrap::operator=(const ScavTrap& rhs)

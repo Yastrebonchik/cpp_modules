@@ -3,20 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   SuperTrap.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/17 01:33:13 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/17 01:33:13 by marvin           ###   ########.fr       */
+/*   Updated: 2021/01/23 19:36:21 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "SuperTrap.hpp"
 
-SuperTrap::SuperTrap(std::string name) : ClapTrap(name), FragTrap(name), NinjaTrap(name)
+SuperTrap::SuperTrap(std::string name) : ClapTrap(name), NinjaTrap(name), FragTrap(name)
 {
 	std::cout << "SuperTrap summoned!" << std::endl;
 	this->_level = 1;
 	this->_hitPoints = FragTrap::_hitPoints;
+	std::cout << FragTrap::_hitPoints << std::endl;
 	this->_maxHitPoints = FragTrap::_maxHitPoints;
 	this->_energyPoints = NinjaTrap::_energyPoints;
 	this->_maxEnergyPoints = NinjaTrap::_maxEnergyPoints;
@@ -25,18 +26,10 @@ SuperTrap::SuperTrap(std::string name) : ClapTrap(name), FragTrap(name), NinjaTr
 	this->_armorDamageReduction = FragTrap::_armorDamageReduction;
 }
 
-SuperTrap::SuperTrap(const SuperTrap &src) : ClapTrap(src), FragTrap(src), NinjaTrap(src)
+SuperTrap::SuperTrap(const SuperTrap &src) : ClapTrap(src), NinjaTrap(src), FragTrap(src)
 {
+	*this = src;
 	std::cout << "SuperTrap summoned!" << std::endl;
-	this->_name = src._name;
-	this->_maxHitPoints = src._maxHitPoints;
-	this->_maxEnergyPoints = src._maxEnergyPoints;
-	this->_hitPoints = src._hitPoints;
-	this->_energyPoints = src._energyPoints;
-	this->_level = src._level;
-	this->_meleeAttackDamage = src._meleeAttackDamage;
-	this->_rangedAttackDamage = src._rangedAttackDamage;
-	this->_armorDamageReduction = src._armorDamageReduction;
 }
 
 SuperTrap::~SuperTrap()
@@ -44,7 +37,7 @@ SuperTrap::~SuperTrap()
 	std::cout << "SuperTrap destroyed!" << std::endl;
 }
 
-SuperTrap&		SuperTrap::operator=(const SuperTrap& rhs)
+SuperTrap&		SuperTrap::operator=(const SuperTrap &rhs)
 {
 	if (this != &rhs)
 	{
@@ -57,10 +50,10 @@ SuperTrap&		SuperTrap::operator=(const SuperTrap& rhs)
 
 void			SuperTrap::rangedAttack(std::string const & target)
 {
-	FragTrap::rangedAttack(target);
+	this->FragTrap::rangedAttack(target);
 }
 
 void			SuperTrap::meleeAttack(std::string const & target)
 {
-	NinjaTrap::meleeAttack(target);
+	this->NinjaTrap::meleeAttack(target);
 }

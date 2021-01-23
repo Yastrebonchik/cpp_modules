@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/16 13:42:55 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/16 13:42:55 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/16 13:42:55 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/23 15:22:06 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,14 @@ public:
 	FragTrap(FragTrap const &src);
 	FragTrap&	operator=(const FragTrap& rhs);
 
-	void		vaulthunter_dot_exe(std::string const & target);
 	void		rangedAttack(std::string const & target);
 	void		meleeAttack(std::string const & target);
 	void		takeDamage(unsigned int amount);
 	void		beRepaired(unsigned int amount);
+	void		vaulthunter_dot_exe(std::string const & target);
+	int			getHP();
+	int			getEnergyPoints();
+	
 
 private:
 	FragTrap();

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 16:28:44 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/16 16:28:44 by marvin           ###   ########.fr       */
+/*   Updated: 2021/01/23 19:04:20 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	this->_meleeAttackDamage = 20;
 	this->_rangedAttackDamage = 15;
 	this->_armorDamageReduction = 5;
-	std::cout << "This time it'll be awesome, I promise!" << std::endl;
+	std::cout << "This time I'll be awesome, I promise!" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &src) : ClapTrap(src)
 {
-	std::cout << "This time it'll be awesome, I promise!" << std::endl;
+	std::cout << "This time I'll be awesome, I promise!" << std::endl;
 }
 
 ScavTrap::~ScavTrap()

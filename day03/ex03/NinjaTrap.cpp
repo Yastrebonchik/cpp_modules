@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   NinjaTrap.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/17 00:55:07 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/17 00:55:07 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/17 00:55:07 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/23 18:07:35 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ NinjaTrap::NinjaTrap(std::string name) : ClapTrap(name)
 
 NinjaTrap::NinjaTrap(NinjaTrap const &src) : ClapTrap(src)
 {
+	*this = src;
 	std::cout << "KYYYYYYYYYYYYYYYYYYYYAAAAAA!!!!!" << std::endl;
 }
 
@@ -55,7 +56,7 @@ void	NinjaTrap::rangedAttack(std::string const & target)
 void	NinjaTrap::meleeAttack(std::string const & target)
 {
 	if (target.compare(this->_name) == 0)
-		std::cout << "Harakiri" << std::endl;
+		std::cout << this->_name << " can't bear such a blame <Commits Harakiri>" << std::endl;
 	else
 	{
 		std::cout << "Ninja-TP " << this->_name << " attacks " << target;

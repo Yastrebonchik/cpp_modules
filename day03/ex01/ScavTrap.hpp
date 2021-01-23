@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/16 16:29:11 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/16 16:29:11 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/16 16:29:11 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/23 17:45:34 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ public:
 	void		takeDamage(unsigned int amount);
 	void		beRepaired(unsigned int amount);
 	void		challengeNewcomer(void);
+	int			getHP();
 
 private:
 	ScavTrap();
