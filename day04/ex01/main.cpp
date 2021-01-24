@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 12:15:33 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/25 01:01:16 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/25 01:06:47 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,11 +89,10 @@ int		main()
 	std::cout << *me;
 
 
-	//To check assignment operator
 	Enemy	*copy = new Mule();
 
 	std::cout << "Mule hp = " << copy->getHP() << std::endl;
-	copy = mule;
+	*copy = *mule;
 	std::cout << "Mule hp = " << copy->getHP() << std::endl;
 
 	me->attack(mule);
