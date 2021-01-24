@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 11:10:30 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/24 18:36:41 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/24 22:57:37 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,11 @@ SuperMutant::~SuperMutant()
 
 SuperMutant&	SuperMutant::operator=(const SuperMutant &rhs)
 {
-	Enemy::operator=(rhs);
+	if (this != &rhs)
+	{
+		this->_hitPoints = rhs.getHP();
+		this->_type = rhs.getType();
+	}
 	return (*this);
 }
 

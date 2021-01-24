@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 12:15:33 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/24 20:36:34 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/25 01:01:16 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,14 +99,14 @@ int		main()
 	me->attack(mule);
 	std::cout << "Mule hp = " << mule->getHP() << std::endl;
 	std::cout << *me;
+	std::cout << "Mule hp = " << copy->getHP() << std::endl;
 	me->attack(mule);
-	std::cout << "Mule hp = " << mule->getHP() << std::endl;
 	std::cout << *me;
 	
 	delete me;
 	delete pr;
 	delete pf;
 	delete autorifle;
-	//delete copy;
+	delete copy;
 	return (0);
 }
