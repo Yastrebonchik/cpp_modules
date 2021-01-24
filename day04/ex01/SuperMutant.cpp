@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   SuperMutant.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/18 11:10:30 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/18 11:10:30 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/18 11:10:30 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/24 18:36:41 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ SuperMutant::SuperMutant() : Enemy(170, "Super Mutant")
 SuperMutant::SuperMutant(const SuperMutant &src) : Enemy(src)
 {
 	std::cout << "Gaaah. Me want smash heads!" << std::endl;
-	this->_hitPoints = src.getHP();
-	this->_type = "Super Mutant";
+	*this = src;
 }
 
 SuperMutant::~SuperMutant()
@@ -33,8 +32,7 @@ SuperMutant::~SuperMutant()
 
 SuperMutant&	SuperMutant::operator=(const SuperMutant &rhs)
 {
-	if (this != &rhs)
-		Enemy::operator=(rhs);
+	Enemy::operator=(rhs);
 	return (*this);
 }
 

@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   Rancher.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/18 11:10:27 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/24 20:20:30 by kcedra           ###   ########.fr       */
+/*   Created: 2021/01/24 16:20:26 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/24 18:17:02 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPERMUTANT_HPP
-# define SUPERMUTANT_HPP
+#ifndef RANCHER_HPP
+#define RANCHER_HPP
 
-# include <iostream>
-# include <string>
-# include "Enemy.hpp"
+#include "Victim.hpp"
 
-class SuperMutant : public Enemy
+class Rancher : public Victim
 {
 private:
+	Rancher();
 
 public:
-	SuperMutant();
-	SuperMutant(const SuperMutant &src);
-	virtual ~SuperMutant();
+	Rancher(std::string name);
+	Rancher(const Rancher &src);
+	virtual	~Rancher();
 
-	SuperMutant& 		operator=(const SuperMutant &rhs);
+	Rancher&	operator=(const Rancher& rhs);
 
-	void			takeDamage(int damage);
+	void getPolymorphed() const;
 };
+
+std::ostream &operator<<(std::ostream &out, const Rancher &src);
 
 #endif

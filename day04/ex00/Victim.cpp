@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Victim.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/17 15:09:11 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/17 15:09:11 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/17 15:09:11 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/24 18:17:09 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ std::string	Victim::getName(void) const
 
 std::ostream &operator<<(std::ostream &out, const Victim &src)
 {
-	out << "I am " << src.getName() << " and I like otters!" << std::endl;
+	out << "I'm " << src.getName() << " and I like otters!" << std::endl;
 	return (out);
 }
 

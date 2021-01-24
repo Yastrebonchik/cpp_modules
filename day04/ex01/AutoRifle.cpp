@@ -1,46 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AWeapon.cpp                                        :+:      :+:    :+:   */
+/*   AutoRifle.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/17 23:55:44 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/24 18:22:47 by kcedra           ###   ########.fr       */
+/*   Created: 2021/01/24 20:15:19 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/24 20:18:44 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AWeapon.hpp"
+#include "AutoRifle.hpp"
 
-AWeapon::AWeapon(std::string const & name, int apcost, int damage) : _name(name), _APCost(apcost), _damage(damage)
+AutoRifle::AutoRifle() : AWeapon("Auto Rifle", 6, 30)
 {
 }
 
-AWeapon::AWeapon(const AWeapon &src)
+AutoRifle::AutoRifle(const AutoRifle &src) : AWeapon(src)
 {
 	*this = src;
 }
 
-AWeapon::~AWeapon()
+AutoRifle::~AutoRifle()
 {
 }
 
-std::string	const	AWeapon::getName(void) const
-{
-	return (this->_name);
-}
-
-int			AWeapon::getAPCost() const
-{
-	return (this->_APCost);
-}
-
-int			AWeapon::getDamage() const
-{
-	return (this->_damage);
-}
-
-AWeapon& 	AWeapon::operator=(const AWeapon &rhs)
+AutoRifle& 	AutoRifle::operator=(const AutoRifle &rhs)
 {
 	if (this != &rhs)
 	{
@@ -50,3 +35,9 @@ AWeapon& 	AWeapon::operator=(const AWeapon &rhs)
 	}
 	return (*this);
 }
+
+void			AutoRifle::attack(void) const
+{
+	std::cout << "* tra ta ta ta ta *" << std::endl;
+}
+

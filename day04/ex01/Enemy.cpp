@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Enemy.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/18 00:27:58 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/18 00:27:58 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/18 00:27:58 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/24 18:32:54 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@ Enemy::Enemy(int hp, std::string const & type) : _hitPoints(hp), _type(type)
 {
 }
 
-Enemy::Enemy(const Enemy &src) : _hitPoints(src.getHP()), _type(src.getType())
+Enemy::Enemy(const Enemy &src)
 {
+	*this = src;
 }
 
 Enemy::~Enemy()
 {
 }
 
-Enemy& 		Enemy::operator=(const Enemy &rhs)
+Enemy& 				Enemy::operator=(const Enemy &rhs)
 {
 	if (this != &rhs)
 	{
@@ -34,17 +35,17 @@ Enemy& 		Enemy::operator=(const Enemy &rhs)
 	return (*this);
 }
 
-std::string	Enemy::getType() const
+std::string const	Enemy::getType() const
 {
 	return (this->_type);
 }
 
-int			Enemy::getHP() const
+int					Enemy::getHP() const
 {
 	return (this->_hitPoints);
 }
 
-void		Enemy::takeDamage(int damage)
+void				Enemy::takeDamage(int damage)
 {
 	int hp;
 

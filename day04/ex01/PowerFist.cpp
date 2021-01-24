@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PowerFist.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/18 00:24:26 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/18 00:24:26 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/18 00:24:26 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/24 18:25:57 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@ PowerFist::PowerFist() : AWeapon("Power Fist", 8, 50)
 
 PowerFist::PowerFist(const PowerFist &src) : AWeapon(src)
 {
-	this->_name = src.getName();
-	this->_APCost = src.getAPCost();
-	this->_damage = src.getDamage();
+	*this = src;
 }
 
 PowerFist::~PowerFist()

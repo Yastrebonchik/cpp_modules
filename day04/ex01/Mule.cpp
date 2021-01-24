@@ -1,38 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RadScorpion.cpp                                    :+:      :+:    :+:   */
+/*   Mule.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/18 11:29:21 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/24 19:19:53 by kcedra           ###   ########.fr       */
+/*   Created: 2021/01/24 20:03:08 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/24 20:26:13 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "RadScorpion.hpp"
+#include "Mule.hpp"
 
-RadScorpion::RadScorpion() : Enemy(80, "RadScorpion")
+Mule::Mule() : Enemy(120, "Mule")
 {
-	std::cout << "* click click click *" << std::endl;
-	this->_hitPoints = 80;
-	this->_type = "RadScorpion";
+	std::cout << "* BUZZER NOICES *" << std::endl;
+	this->_hitPoints = 120;
+	this->_type = "Mule";
 }
 
-RadScorpion::RadScorpion(const RadScorpion &src) : Enemy(src)
+Mule::Mule(const Mule &src) : Enemy(src)
 {
-	std::cout << "* click click click *" << std::endl;
+	std::cout << "* BUZZER NOICES *" << std::endl;
 	*this = src;
 }
 
-RadScorpion::~RadScorpion()
+Mule::~Mule()
 {
-	std::cout << "* SPROTCH *" << std::endl;
+	std::cout << "I'm returning to the void..." << std::endl;
 }
 
-RadScorpion&	RadScorpion::operator=(const RadScorpion &rhs)
+Mule&	Mule::operator=(const Mule &rhs)
 {
-	Enemy::operator=(rhs);
+	if (this != &rhs)
+	{
+		this->_hitPoints = rhs._hitPoints;
+		this->_type = rhs._type;
+	}
 	return (*this);
 }
-

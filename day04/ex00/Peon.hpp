@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Peon.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/17 15:44:12 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/17 15:44:12 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/17 15:44:12 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/24 18:17:16 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,9 @@ private:
 public:
 	Peon(std::string name);
 	Peon(const Peon &src);
-	~Peon();
+	virtual	~Peon();
 
 	Peon&	operator=(const Peon& rhs);
-
-	std::string	getName(void) const;
 
 	void getPolymorphed() const;
 };

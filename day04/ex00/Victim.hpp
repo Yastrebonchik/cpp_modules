@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Victim.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/17 15:07:53 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/17 15:07:53 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/17 15:07:53 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/24 18:17:00 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ protected:
 public:
 	Victim(std::string name);
 	Victim(const Victim &src);
-	~Victim();
+	virtual	~Victim();
 
 	Victim&	operator=(const Victim& rhs);
 

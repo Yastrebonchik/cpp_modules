@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Peon.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/17 15:45:16 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/17 15:45:16 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/17 15:45:16 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/24 18:17:24 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,18 +36,13 @@ Peon&	Peon::operator=(const Peon& rhs)
 	return *this;
 }
 
-std::string	Peon::getName(void) const
-{
-	return (this->_name);
-}
-
 std::ostream &operator<<(std::ostream &out, const Peon &src)
 {
-	out << "I am " << src.getName() << " and I like otters!" << std::endl;
+	out << "I'm " << src.getName() << " and I like otters!" << std::endl;
 	return (out);
 }
 
 void 		Peon::getPolymorphed() const
 {
-	std::cout << this->_name << " has been turned into a cute little sheep!" << std::endl;
+	std::cout << this->_name << " has been turned into a pink pony!" << std::endl;
 }

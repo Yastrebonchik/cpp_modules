@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/18 11:45:02 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/18 11:45:02 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/18 11:45:02 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/24 19:50:10 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@ Character::Character(std::string const & name) : _name(name), _AP(40), _weapon(N
 {
 }
 
-Character::Character(const Character &src) : _name(src.getName()), _AP(src.getAP()), _weapon(src.getWeapon())
+Character::Character(const Character &src)
 {
+	*this = src;
 }
 
 Character::~Character()
 {
 }
 
-Character&	Character::operator=(const Character &rhs)
+Character&			Character::operator=(const Character &rhs)
 {
 	if (this != &rhs)
 	{
@@ -35,22 +36,22 @@ Character&	Character::operator=(const Character &rhs)
 	return (*this);
 }
 
-std::string	Character::getName(void) const
+std::string	const	Character::getName(void) const
 {
 	return (this->_name);
 }
 
-int			Character::getAP(void) const
+int					Character::getAP(void) const
 {
 	return (this->_AP);
 }
 
-AWeapon*	Character::getWeapon() const
+AWeapon*			Character::getWeapon() const
 {
 	return (this->_weapon);
 }
 
-void		Character::recoverAP()
+void				Character::recoverAP()
 {
 	int	AP;
 
@@ -60,16 +61,16 @@ void		Character::recoverAP()
 	this->_AP = AP;
 }
 
-void 		Character::equip(AWeapon* weapon)
+void 				Character::equip(AWeapon* weapon)
 {
 	this->_weapon = weapon;
 }
 
-void		Character::attack(Enemy* enemy)
+void				Character::attack(Enemy* enemy)
 {
-	if (this->getWeapon() != NULL && enemy != NULL)
+	if (this->getWeapon() != NULL && enemy != NULL && this->_AP > this->getWeapon()->getAPCost())
 	{
-		std::cout << this->_name << " attacks " << enemy->getType() << " with a weapon " << this->getWeapon()->getName() << std::endl;
+		std::cout << this->_name << " attacks " << enemy->getType() << " with a " << this->getWeapon()->getName() << std::endl;
 		this->_weapon->attack();
 		enemy->takeDamage(this->_weapon->getDamage());
 		this->_AP -= this->_weapon->getAPCost();

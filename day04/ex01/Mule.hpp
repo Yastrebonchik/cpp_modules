@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
+/*   Mule.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/18 11:10:27 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/24 20:20:30 by kcedra           ###   ########.fr       */
+/*   Created: 2021/01/24 19:59:02 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/24 20:28:34 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SUPERMUTANT_HPP
-# define SUPERMUTANT_HPP
+#ifndef	MULE_HPP
+# define MULE_HPP
 
-# include <iostream>
-# include <string>
 # include "Enemy.hpp"
 
-class SuperMutant : public Enemy
+class Mule : public Enemy
 {
 private:
 
 public:
-	SuperMutant();
-	SuperMutant(const SuperMutant &src);
-	virtual ~SuperMutant();
+	Mule();
+	Mule(const Mule &src);
+	virtual ~Mule();
 
-	SuperMutant& 		operator=(const SuperMutant &rhs);
-
-	void			takeDamage(int damage);
+	Mule& 		operator=(const Mule &rhs);
 };
 
 #endif

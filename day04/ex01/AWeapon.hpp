@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AWeapon.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/17 23:54:44 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/17 23:54:44 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/17 23:54:44 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/24 20:19:29 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@
 
 class AWeapon
 {
-protected:
+private:
 	AWeapon();
 
+protected:
 	std::string	_name;
 	int			_APCost;
 	int			_damage;
@@ -32,10 +33,10 @@ public:
 
 	AWeapon& 		operator=(const AWeapon &rhs);
 
-	std::string 	getName(void) const;
-	int 			getAPCost() const;
-	int 			getDamage() const;
-	virtual void	attack() const = 0;
+	std::string const	getName(void) const;
+	int 				getAPCost() const;
+	int 				getDamage() const;
+	virtual void		attack() const = 0;
 };
 
 #endif

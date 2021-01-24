@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/18 11:39:47 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/18 11:39:47 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/18 11:39:47 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/24 19:23:04 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,12 @@ public:
 
 	Character&	operator=(const Character &rhs);
 
-	void 		recoverAP(void);
-	void 		equip(AWeapon* weapon);
-	void 		attack(Enemy* enemy);
-	int			getAP(void) const;
-	AWeapon		*getWeapon(void) const;
-	std::string	getName(void) const;
+	void 				recoverAP(void);
+	void 				equip(AWeapon* weapon);
+	void 				attack(Enemy* enemy);
+	int					getAP(void) const;
+	AWeapon				*getWeapon(void) const;
+	std::string	const	getName(void) const;
 };
 
 std::ostream &operator<<(std::ostream &out, const Character &src);
