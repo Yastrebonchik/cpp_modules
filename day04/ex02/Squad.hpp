@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Squad.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/18 14:57:23 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/18 14:57:23 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/18 14:57:23 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/25 19:47:44 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ private:
 
 public:
 	Squad();
-	~Squad();
+	Squad(const Squad &src);
+	virtual	~Squad();
+
+	Squad&			operator=(const Squad &src);
 
 	int 			getCount() const;
 	int 			push(ISpaceMarine* marine);

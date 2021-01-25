@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/17 14:24:31 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/24 18:17:20 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/25 14:59:14 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,8 @@ Sorcerer::~Sorcerer()
 
 Sorcerer&	Sorcerer::operator=(const Sorcerer& rhs)
 {
-	if (this != &rhs)
-	{
-		this->_name = rhs._name;
-		this->_title = rhs._title;
-	}
+	this->_name = rhs._name;
+	this->_title = rhs._title;
 	return *this;
 }
 

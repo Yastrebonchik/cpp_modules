@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/19 00:35:21 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/19 00:35:21 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/19 00:35:21 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/25 19:04:16 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
 	
 public:
 	Ice();
-	~Ice();
+	virtual	~Ice();
 	Ice(const Ice &src);
 
 	Ice&	operator=(const Ice &rhs);

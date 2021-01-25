@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 20:03:08 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/25 01:01:50 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/25 15:01:32 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,7 @@ Mule::~Mule()
 
 Mule&	Mule::operator=(const Mule &rhs)
 {
-	if (this != &rhs)
-	{
-		this->_hitPoints = rhs._hitPoints;
-		this->_type = rhs._type;
-	}
+	this->_hitPoints = rhs._hitPoints;
+	this->_type = rhs._type;
 	return (*this);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AssaultTerminator.cpp                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/18 17:49:44 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/18 17:49:44 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/18 17:49:44 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/25 17:24:28 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ AssaultTerminator::AssaultTerminator()
 
 AssaultTerminator::~AssaultTerminator()
 {
-	std::cout << "I'll be back ..." << std::endl;
+	std::cout << "I'll be back..." << std::endl;
 }
 
 AssaultTerminator::AssaultTerminator(const AssaultTerminator &src)
@@ -30,7 +30,7 @@ AssaultTerminator::AssaultTerminator(const AssaultTerminator &src)
 
 AssaultTerminator* AssaultTerminator::clone() const
 {
-	AssaultTerminator*	clone = new AssaultTerminator(*this);
+	AssaultTerminator*	clone = new AssaultTerminator;
 	return (clone);
 }
 

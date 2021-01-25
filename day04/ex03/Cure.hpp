@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/19 00:49:43 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/19 00:49:43 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/19 00:49:43 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/25 19:05:46 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
 	
 public:
 	Cure();
-	~Cure();
+	virtual	~Cure();
 	Cure(const Cure &src);
 
 	Cure&	operator=(const Cure &rhs);

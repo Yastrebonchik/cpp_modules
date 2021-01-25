@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/20 18:24:03 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/20 18:24:03 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/20 18:24:03 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/25 19:34:46 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,12 @@ int		main()
 	delete bob;
 	delete me;
 	delete src;
+
+	std::cout << "------------------------------------" << std::endl;
+	std::cout << "Additional tests" << std::endl;
+	std::cout << "------------------------------------" << std::endl;
+
+	MateriaSource	source();
 
 	return (0);
 }

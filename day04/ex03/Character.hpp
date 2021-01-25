@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/19 01:22:45 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/19 01:22:45 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/19 01:22:45 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/25 19:33:38 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ private:
 public:
 	Character(std::string name);
 	Character(const Character &src);
-	~Character();
+	virtual	~Character();
 
 	Character&			operator=(const Character &rhs);
 

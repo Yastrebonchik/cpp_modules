@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 11:45:02 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/24 19:50:10 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/25 15:00:13 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,9 @@ Character::~Character()
 
 Character&			Character::operator=(const Character &rhs)
 {
-	if (this != &rhs)
-	{
-		this->_name = rhs._name;
-		this->_AP = rhs._AP;
-		this->_weapon = rhs._weapon;
-	}
+	this->_name = rhs._name;
+	this->_AP = rhs._AP;
+	this->_weapon = rhs._weapon;
 	return (*this);
 }
 

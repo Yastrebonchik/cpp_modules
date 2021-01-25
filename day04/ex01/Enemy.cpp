@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 00:27:58 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/24 18:32:54 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/25 15:00:32 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,8 @@ Enemy::~Enemy()
 
 Enemy& 				Enemy::operator=(const Enemy &rhs)
 {
-	if (this != &rhs)
-	{
-		this->_hitPoints = rhs.getHP();
-		this->_type = rhs.getType();
-	}
+	this->_hitPoints = rhs.getHP();
+	this->_type = rhs.getType();
 	return (*this);
 }
 

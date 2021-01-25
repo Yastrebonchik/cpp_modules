@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/17 14:23:55 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/24 18:17:30 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/25 18:45:05 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ private:
 public:
 	Sorcerer(std::string name, std::string title);
 	Sorcerer(const Sorcerer &src);
-	~Sorcerer();
+	virtual	~Sorcerer();
 
 	Sorcerer&	operator=(const Sorcerer& rhs);
 

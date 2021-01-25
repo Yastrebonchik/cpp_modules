@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 00:24:26 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/24 18:25:57 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/25 15:01:53 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,9 @@ PowerFist::~PowerFist()
 
 PowerFist& 	PowerFist::operator=(const PowerFist &rhs)
 {
-	if (this != &rhs)
-	{
-		this->_name = rhs.getName();
-		this->_APCost = rhs.getAPCost();
-		this->_damage = rhs.getDamage();
-	}
+	this->_name = rhs.getName();
+	this->_APCost = rhs.getAPCost();
+	this->_damage = rhs.getDamage();
 	return *this;
 }
 

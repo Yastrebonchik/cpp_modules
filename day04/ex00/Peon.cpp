@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/17 15:45:16 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/24 18:17:24 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/25 14:58:53 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,7 @@ Peon::~Peon()
 
 Peon&	Peon::operator=(const Peon& rhs)
 {
-	if (this != &rhs)
-		this->_name = rhs._name;
+	this->_name = rhs._name;
 	return *this;
 }
 

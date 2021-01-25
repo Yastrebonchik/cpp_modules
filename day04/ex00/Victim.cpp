@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/17 15:09:11 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/24 18:17:09 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/25 14:59:22 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ Victim::~Victim()
 
 Victim&	Victim::operator=(const Victim& rhs)
 {
-	if (this != &rhs)
-		this->_name = rhs._name;
+	this->_name = rhs._name;
 	return *this;
 }
 

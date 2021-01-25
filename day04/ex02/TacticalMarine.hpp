@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   TacticalMarine.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/18 16:58:17 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/18 16:58:17 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/18 16:58:17 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/25 19:47:48 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ private:
 public:
 	TacticalMarine();
 	TacticalMarine(const TacticalMarine &src);
-	~TacticalMarine();
+	virtual	~TacticalMarine();
 
 	TacticalMarine&	operator=(const	TacticalMarine &src);
 

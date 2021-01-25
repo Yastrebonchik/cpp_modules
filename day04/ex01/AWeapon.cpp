@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/17 23:55:44 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/24 18:22:47 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/25 14:59:58 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,8 @@ int			AWeapon::getDamage() const
 
 AWeapon& 	AWeapon::operator=(const AWeapon &rhs)
 {
-	if (this != &rhs)
-	{
-		this->_name = rhs._name;
-		this->_APCost = rhs._APCost;
-		this->_damage = rhs._damage;
-	}
+	this->_name = rhs._name;
+	this->_APCost = rhs._APCost;
+	this->_damage = rhs._damage;
 	return (*this);
 }

@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 00:14:06 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/24 18:25:58 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/25 15:01:43 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,9 @@ PlasmaRifle::~PlasmaRifle()
 
 PlasmaRifle& 	PlasmaRifle::operator=(const PlasmaRifle &rhs)
 {
-	if (this != &rhs)
-	{
-		this->_name = rhs._name;
-		this->_APCost = rhs._APCost;
-		this->_damage = rhs._damage;
-	}
+	this->_name = rhs._name;
+	this->_APCost = rhs._APCost;
+	this->_damage = rhs._damage;
 	return (*this);
 }
 

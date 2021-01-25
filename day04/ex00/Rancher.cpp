@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 16:21:26 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/24 18:17:05 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/25 14:59:04 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,7 @@ Rancher::~Rancher()
 
 Rancher&	Rancher::operator=(const Rancher &rhs)
 {
-	if (this != &rhs)
-		this->_name = rhs._name;
+	this->_name = rhs._name;
 	return (*this);
 }
 

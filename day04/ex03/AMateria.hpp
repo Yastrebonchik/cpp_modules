@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/18 23:54:56 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/18 23:54:56 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/18 23:54:56 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/25 19:26:45 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ class AMateria
 private:
 	AMateria();
 
+	unsigned int	_xp;
+
 protected:
 	std::string		_type;
-	unsigned int	_xp;
 
 public:
 	AMateria(std::string const & type);

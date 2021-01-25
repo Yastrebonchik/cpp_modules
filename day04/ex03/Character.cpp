@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/19 01:23:42 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/19 01:23:42 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/19 01:23:42 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/25 19:33:39 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Character::~Character()
 	{
 		if (this->_inventory[i] != nullptr)
 			delete this->_inventory[i];
-		this->_inventory[i++] = nullptr;
+		i++;
 	}
 }
 

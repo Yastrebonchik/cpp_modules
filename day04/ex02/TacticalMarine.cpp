@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   TacticalMarine.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/18 16:59:31 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/18 16:59:31 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/18 16:59:31 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/25 17:24:36 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ TacticalMarine::TacticalMarine(const TacticalMarine &src)
 
 TacticalMarine* TacticalMarine::clone() const
 {
-	TacticalMarine*	clone = new TacticalMarine(*this);
+	TacticalMarine*	clone = new TacticalMarine;
 	return (clone);
 }
 

@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 20:15:19 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/24 20:18:44 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/25 14:59:48 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,9 @@ AutoRifle::~AutoRifle()
 
 AutoRifle& 	AutoRifle::operator=(const AutoRifle &rhs)
 {
-	if (this != &rhs)
-	{
-		this->_name = rhs._name;
-		this->_APCost = rhs._APCost;
-		this->_damage = rhs._damage;
-	}
+	this->_name = rhs._name;
+	this->_APCost = rhs._APCost;
+	this->_damage = rhs._damage;
 	return (*this);
 }
 
