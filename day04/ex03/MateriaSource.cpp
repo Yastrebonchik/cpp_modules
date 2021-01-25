@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 15:42:42 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/25 19:33:31 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/26 01:40:08 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,14 @@ MateriaSource::MateriaSource(const MateriaSource &src)
 	int i;
 	
 	i = 0;
-	while  (i < 4)
+	while (i < 4)
 	{
-		if (this->_book[i] != nullptr)
-			delete this->_book[i];
+		if (src._book[i] == nullptr)
+				this->_book[i] = nullptr;
+			else
+				this->_book[i] = src._book[i]->clone();
 		i++;
 	}
-	i = 0;
-	while (i < 4)
-		this->learnMateria(src._book[i++]);
 }
 
 MateriaSource&	MateriaSource::operator=(const MateriaSource &rhs)
@@ -65,7 +64,13 @@ MateriaSource&	MateriaSource::operator=(const MateriaSource &rhs)
 		}
 		i = 0;
 		while (i < 4)
-			this->learnMateria(rhs._book[i++]);
+		{
+			if (rhs._book[i] == nullptr)
+				this->_book[i] = nullptr;
+			else
+				this->_book[i] = rhs._book[i]->clone();
+			i++;
+		}
 	}
 	return (*this);
 }
@@ -97,6 +102,7 @@ AMateria* 		MateriaSource::createMateria(std::string const & type)
 	i = 0;
 	while (i < 4)
 	{
+		std::cout << this->_book[i]->getType() << std::endl;
 		if (this->_book[i]->getType() == type)
 		{
 			materia = this->_book[i]->clone();
