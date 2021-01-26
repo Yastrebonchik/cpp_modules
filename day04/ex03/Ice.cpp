@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 00:36:43 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/25 19:33:28 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/26 13:53:55 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Ice&		Ice::operator=(const Ice &rhs)
 
 Ice* 		Ice::clone() const
 {
-	Ice*	copy = new Ice(*this);
+	Ice*	copy = new Ice;
 
 	return (copy);
 }

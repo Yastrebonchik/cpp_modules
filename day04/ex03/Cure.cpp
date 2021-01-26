@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 00:50:10 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/25 19:33:25 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/26 14:28:28 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Cure&		Cure::operator=(const Cure &rhs)
 
 Cure* 		Cure::clone() const
 {
-	Cure*	copy = new Cure(*this);
+	Cure*	copy = new Cure;
 
 	return (copy);
 }

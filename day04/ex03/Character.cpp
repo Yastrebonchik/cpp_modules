@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 01:23:42 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/25 22:15:20 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/26 14:28:26 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,13 @@ Character::Character(const Character &src) : _name(src.getName())
 	}
 	i = 0;
 	while (i < 4)
-		this->equip(src._inventory[i]->clone());
+	{
+		if (src._inventory[i] == nullptr)
+			this->_inventory[i] = nullptr;
+		else
+			this->equip(src._inventory[i]->clone());
+		i++;
+	}
 }
 
 Character::~Character()
@@ -66,7 +72,13 @@ Character&			Character::operator=(const Character &rhs)
 		i = 0;
 		this->_name = rhs._name;
 		while(i < 4)
-			this->equip(rhs._inventory[i++]->clone());
+		{
+			if (rhs._inventory[i] == nullptr)
+				this->_inventory[i] = nullptr;
+			else
+				this->equip(rhs._inventory[i]->clone());
+			i++;
+		}
 	}
 	return (*this);
 }

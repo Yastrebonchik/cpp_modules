@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 15:42:42 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/26 01:40:08 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/26 14:28:43 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,23 @@ MateriaSource::MateriaSource()
 
 MateriaSource::~MateriaSource()
 {
-	int i;
+	int 		i;
+	int			j;
 
 	i = 0;
 	while  (i < 4)
 	{
 		if (this->_book[i] != nullptr)
+		{
+			j = i + 1;
+			while (j < 4)
+			{
+				if (this->_book[j] == this->_book[i])
+					this->_book[j] = nullptr;
+				j++;
+			}
 			delete this->_book[i];
+		}
 		i++;
 	}
 }
@@ -102,9 +112,8 @@ AMateria* 		MateriaSource::createMateria(std::string const & type)
 	i = 0;
 	while (i < 4)
 	{
-		std::cout << this->_book[i]->getType() << std::endl;
 		if (this->_book[i]->getType() == type)
-		{
+		{	
 			materia = this->_book[i]->clone();
 			return (materia);
 		}
