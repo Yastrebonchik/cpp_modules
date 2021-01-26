@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/20 01:10:59 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/20 01:10:59 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/20 01:10:59 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/20 01:10:59 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,6 @@ public:
 	~Intern();
 
 	Intern&	operator=(const Intern &rhs);
-
-	class RequestFormUnknownException: public std::exception 
-	{
-		virtual const char* what() const throw();
-	};
 
 	Form*	makeForm(std::string name, std::string target);
 	static void	createTeamplate(std::string target);

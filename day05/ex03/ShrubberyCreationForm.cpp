@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/19 20:57:44 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/19 20:57:44 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/19 20:57:44 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/27 02:05:12 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,14 +91,16 @@ void					ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 	std::ofstream	output;
 	std::string		newfile;
 
-	if (executor.getGrade() > this->getExecGrade())
-		throw Form::UnableToExecuteException();
 	if (this->getSigned() == 0)
 		throw Form::NotSignedException();
+	else if (this->getExecGrade() < executor.getGrade())
+		throw Form::GradeTooLowException();
+	else
+		std::cout << executor.getName() << " executes " << this->getName() << std::endl;
 	newfile = this->_target + "_shrubbery";
 	output.open(newfile);
 	if (output.is_open() == 0)
-		throw Form::FileOpenException();
+		std::cout << "File error occured" << std::endl;
 	output << ShrubberyCreationForm::_trees[0] << std::endl << std::endl;
 	output << ShrubberyCreationForm::_trees[1] << std::endl << std::endl;
 	output << ShrubberyCreationForm::_trees[2];

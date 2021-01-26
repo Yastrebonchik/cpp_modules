@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/20 01:00:01 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/20 01:00:01 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/20 01:00:01 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/27 02:05:08 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ private:
 public:
 	PresidentialPardonForm(const std::string &target);
 	PresidentialPardonForm(const PresidentialPardonForm &src);
-	~PresidentialPardonForm();
+	virtual	~PresidentialPardonForm();
 
 	PresidentialPardonForm&	operator=(const PresidentialPardonForm &rhs);
 	void					execute(Bureaucrat const & executor) const;

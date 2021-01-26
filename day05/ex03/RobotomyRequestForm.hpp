@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/20 00:45:44 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/20 00:45:44 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/20 00:45:44 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/27 02:05:11 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ private:
 public:
 	RobotomyRequestForm(const std::string &target);
 	RobotomyRequestForm(const RobotomyRequestForm &src);
-	~RobotomyRequestForm();
+	virtual	~RobotomyRequestForm();
 
 	RobotomyRequestForm&	operator=(const RobotomyRequestForm &rhs);
 	void					execute(Bureaucrat const & executor) const;

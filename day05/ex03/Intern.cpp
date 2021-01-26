@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/20 16:05:09 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/20 16:05:09 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/20 16:05:09 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/20 16:05:09 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,11 +68,6 @@ Intern&	Intern::operator=(const Intern &rhs)
 	return (*this);
 }
 
-const char* Intern::RequestFormUnknownException::what() const throw()
-{
-	return ("InternException: Request of unknown form");
-}
-
 void	Intern::createTeamplate(std::string target)
 {
 	Intern::_formPairs[0] = new ShrubberyCreationForm(target);
@@ -108,5 +103,9 @@ Form*	Intern::makeForm(std::string name, std::string target)
 		}
 		i++;
 	}
-	throw Intern::RequestFormUnknownException();
+	std::cout << "Unable to create : form unknown" << std::endl;
+	i = 0;
+	while (i < 3)
+		delete Intern::_formPairs[i++];
+	return (newform);
 }

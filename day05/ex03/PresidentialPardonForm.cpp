@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/20 01:01:12 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/20 01:01:12 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/20 01:01:12 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/27 02:05:07 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ PresidentialPardonForm&	PresidentialPardonForm::operator=(const PresidentialPard
 
 void					PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
-	std::string		newfile;
-
-	if (executor.getGrade() > this->getExecGrade())
-		throw Form::UnableToExecuteException();
 	if (this->getSigned() == 0)
 		throw Form::NotSignedException();
+	else if (this->getExecGrade() < executor.getGrade())
+		throw Form::GradeTooLowException();
+	else
+		std::cout << executor.getName() << " executes " << this->getName() << std::endl;
 	std::cout << this->_target << " has been pardoned by Zafod Beeblebrox" << std::endl;
 }
