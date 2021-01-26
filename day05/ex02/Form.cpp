@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/19 17:54:41 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/19 17:54:41 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/19 17:54:41 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/26 19:33:40 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,24 +63,9 @@ const char* Form::GradeTooLowException::what() const throw()
 	return ("FormException: Grade too Low");
 }
 
-const char* Form::AlreadySignedException::what() const throw()
-{
-	return ("FormException: Form is already signed");
-}
-
 const char* Form::NotSignedException::what() const throw()
 {
 	return ("FormException: Form is not signed");
-}
-
-const char* Form::UnableToExecuteException::what() const throw()
-{
-	return ("FormException: Bureaucrat doesn't have enough grade to execute this form");
-}
-
-const char* Form::FileOpenException::what() const throw()
-{
-	return ("FormException: Unable to open file");
 }
 
 void		Form::throw_expeption()
@@ -93,9 +78,7 @@ void		Form::throw_expeption()
 
 void		Form::beSigned(const Bureaucrat &src)
 {
-	if (this->_signed)
-		throw Form::AlreadySignedException();
-	else if (this->_signGrade < src.getGrade())
+	if (this->_signGrade < src.getGrade())
 		throw Form::GradeTooLowException();
 	this->_signed = 1;
 }

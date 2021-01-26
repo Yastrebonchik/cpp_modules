@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/19 17:53:15 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/19 17:53:15 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/19 17:53:15 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/26 18:52:12 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,16 +42,12 @@ public:
 	{
 		virtual const char* what() const throw();
 	};
-	class AlreadySignedException: public std::exception 
-	{
-		virtual const char* what() const throw();
-	};
 
 	std::string	getName() const;
 	int			getSignGrade() const;
 	int			getExecGrade() const;
 	bool		getSigned() const;
-	void		throw_expeption();
+	void		throw_expeption(int value);
 	void		beSigned(const Bureaucrat &src);
 };
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/19 17:53:15 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/19 17:53:15 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/19 17:53:15 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/26 19:38:39 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ private:
 public:
 	Form(std::string name, int signGrade, int execGrade);
 	Form(const Form &src);
-	~Form();
+	virtual	~Form();
 
 	Form&	operator=(const Form &src);
 
@@ -42,19 +42,7 @@ public:
 	{
 		virtual const char* what() const throw();
 	};
-	class AlreadySignedException: public std::exception 
-	{
-		virtual const char* what() const throw();
-	};
 	class NotSignedException: public std::exception 
-	{
-		virtual const char* what() const throw();
-	};
-	class UnableToExecuteException: public std::exception 
-	{
-		virtual const char* what() const throw();
-	};
-	class FileOpenException: public std::exception 
 	{
 		virtual const char* what() const throw();
 	};

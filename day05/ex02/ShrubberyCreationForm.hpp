@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/19 20:57:08 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/19 20:57:08 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/19 20:57:08 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/26 19:39:00 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ private:
 public:
 	ShrubberyCreationForm(const std::string &target);
 	ShrubberyCreationForm(const ShrubberyCreationForm &src);
-	~ShrubberyCreationForm();
+	virtual	~ShrubberyCreationForm();
 
 	ShrubberyCreationForm&	operator=(const ShrubberyCreationForm &rhs);
 	void					execute(Bureaucrat const & executor) const;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/19 15:55:04 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/19 15:55:04 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/19 15:55:04 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/26 18:14:52 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
 {
-	Bureaucrat::throw_expeption();
+	Bureaucrat::throw_expeption(grade);
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &src) : _name(src._name), _grade(src._grade)
 {
-	Bureaucrat::throw_expeption();
 }
 
 Bureaucrat::~Bureaucrat()
@@ -28,12 +27,7 @@ Bureaucrat::~Bureaucrat()
 
 Bureaucrat&	Bureaucrat::operator=(const Bureaucrat &rhs)
 {
-	if (this != &rhs)
-	{
-		this->_name = rhs._name;
-		this->_grade = rhs._grade;
-	}
-	Bureaucrat::throw_expeption();
+	this->_grade = rhs._grade;
 	return (*this);
 }
 
@@ -49,21 +43,21 @@ int			Bureaucrat::getGrade() const
 
 void		Bureaucrat::incrementGrade()
 {
+	Bureaucrat::throw_expeption(this->_grade - 1);
 	this->_grade--;
-	Bureaucrat::throw_expeption();
 }
 
 void		Bureaucrat::decrementGrade()
 {
+	Bureaucrat::throw_expeption(this->_grade + 1);
 	this->_grade++;
-	Bureaucrat::throw_expeption();
 }
 
-void		Bureaucrat::throw_expeption()
+void		Bureaucrat::throw_expeption(int value)
 {
-	if (this->_grade < 1)
+	if (value < 1)
 		throw Bureaucrat::GradeTooHighException();
-	else if (this->_grade > 150)
+	else if (value > 150)
 		throw Bureaucrat::GradeTooLowException();
 }
 

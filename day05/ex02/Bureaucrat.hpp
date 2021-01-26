@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/19 15:54:29 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/19 15:54:29 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/19 15:54:29 by kcedra            #+#    #+#             */
+/*   Updated: 2021/01/26 19:04:11 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Bureaucrat
 {
 private:
 	Bureaucrat();
-	std::string	_name;
-	int			_grade;
+	const std::string	_name;
+	int					_grade;
 
 public:
 	Bureaucrat(std::string name, int grade);
@@ -45,7 +45,7 @@ public:
 	int			getGrade() const;
 	void		incrementGrade();
 	void		decrementGrade();
-	void		throw_expeption();
+	void		throw_expeption(int value);
 	void		signForm(Form &src) const;
 	void		executeForm(Form const & form);
 };
