@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 15:55:13 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/26 23:31:48 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/27 15:08:25 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 
 int		main()
 {
+	std::srand(time(0));
 	Form		*trees = new ShrubberyCreationForm("New Year");
 	Form		*robotomy = new RobotomyRequestForm("CEO of clown department");
 	Form		*president = new PresidentialPardonForm("John Wick");
 	Bureaucrat	yoshimura("Yoshimura", 146);
 
-	std::srand(time(0));
 	std::cout << "--------------------------------------------------------------------------" << std::endl;
 	std::cout << "Tests with shrubbery form" << std::endl;
 	std::cout << "--------------------------------------------------------------------------" << std::endl;

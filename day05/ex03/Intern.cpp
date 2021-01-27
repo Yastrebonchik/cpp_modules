@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/20 16:05:09 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/20 16:05:09 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/27 15:11:08 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ Form*	Intern::makeForm(std::string name, std::string target)
 		formname = Intern::_forms[i];
 		if (formname == strToLower(name))
 		{
-			created = i % 5;
+			created = i / 5;
 			newform = Intern::_formPairs[created];
 			i = 0;
 			while (i < 3)
