@@ -3,20 +3,20 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/07 17:38:03 by kcedra            #+#    #+#              #
-#    Updated: 2021/01/20 23:50:04 by marvin           ###   ########.fr        #
+#    Updated: 2021/01/27 15:42:27 by kcedra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = clang++
 
-NAME = convert
+NAME = serialize
 
 FLAGS = -Wall -Werror -Wextra
 
-SOURCES = convert.cpp
+SOURCES = main.cpp serialize.cpp
 
 O_FILES = $(SOURCES:.cpp=.o)
 

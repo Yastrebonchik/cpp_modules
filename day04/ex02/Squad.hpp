@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 14:57:23 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/25 19:47:44 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/27 17:28:46 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class Squad : public ISquad
 {
 private:
-	ISpaceMarine	**_squad;	
+	ISpaceMarine	**_squad;
 	int				_quan;
 
 public:
