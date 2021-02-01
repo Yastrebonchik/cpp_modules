@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   serialize.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
+/*   By: alexander <alexander@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 15:00:45 by kcedra            #+#    #+#             */
-/*   Updated: 2021/02/02 01:27:53 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/02/02 02:02:10 by alexander        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,19 @@ void*	serialize(void)
 	i = 0;
 	j = 0;
 	while (j < 8)
-	{
-		str[j]= static_cast<char>(j + 65);//std::rand() % 25 + 65);
-		j++;
-	}
+		str[j++]= (std::rand() % 25 + 65);
 	reinterpet = reinterpret_cast<char*>(&str);
 	j = 0;
 	while (i < 24)
 		result[i++] = reinterpet[j++];
-	number = std::rand() % 10;
+	number = std::rand() % 10000 - 5000;
 	reinterpet = reinterpret_cast<char*>(&number);
 	j = 0;
 	while (i < 28)
 		result[i++] = reinterpet[j++];
 	j = 0;
 	while (j < 8)
-		str[j++] = static_cast<char>(std::rand() % 25 + 65);
+		str[j++] = (std::rand() % 25 + 65);
 	reinterpet = reinterpret_cast<char*>(&str);
 	j = 0;
 	while (i < 52)
