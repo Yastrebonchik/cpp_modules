@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 15:03:09 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/27 19:44:22 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/01/29 02:22:29 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ int main()
 	deserialized = deserialize(serialized);
 
 	std::cout << "String 1 = " << deserialized->s1 << std::endl;
+	std::cout << "Number = " << deserialized->n << std::endl;
 	std::cout << "String 2 = " << deserialized->s2 << std::endl;
 
-	std::cout << "Size of data = " << sizeof(std::string) << std::endl;
+	std::cout << "Size of data = " << sizeof(Data) << std::endl;
 	return (0);
 }

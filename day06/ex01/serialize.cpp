@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 15:00:45 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/27 19:57:47 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/02/02 01:27:53 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,44 +16,35 @@ void*	serialize(void)
 {
 	int			i;
 	int			j;
-	int			*number = new int[1];
-	char		*num = new char[8];
-	char		*res1 = new char[24];
-	std::string	str1;
+	int			number;
+	std::string	str;
 	char*		result = new char[52];
-	void*		strcast;
+	char*		reinterpet;
 
 	i = 0;
-	while (i < 8)
-		str1[i++] = static_cast<char>(std::rand() % 25 + 65);
-	//result = reinterpret_cast<char*>(str1);
-	strcast = &str1;
-	res1 = reinterpret_cast<char*>(strcast);
-	i = 0;
+	j = 0;
+	while (j < 8)
+	{
+		str[j]= static_cast<char>(j + 65);//std::rand() % 25 + 65);
+		j++;
+	}
+	reinterpet = reinterpret_cast<char*>(&str);
 	j = 0;
 	while (i < 24)
-		res1[i++] = result[j++];
+		result[i++] = reinterpet[j++];
+	number = std::rand() % 10;
+	reinterpet = reinterpret_cast<char*>(&number);
 	j = 0;
-	*number = std::rand() % 10000;
-	num = reinterpret_cast<char*>(number);
-	while (i < 32)
-		result[i++] = num[j++];
-	i = 0;
-	while (i < 8)
-		str1[i++] = static_cast<char>(std::rand() % 25 + 65);
-	strcast = &str1;
-	res1 = reinterpret_cast<char*>(strcast);
-	i = 32;
+	while (i < 28)
+		result[i++] = reinterpet[j++];
 	j = 0;
-	while (i < 54)
-		res1[i++] = result[j++];
-
-	std::cout << "I'm here" << std::endl;
-	//delete[] number;
-	//delete[] num;
-	//delete[] res1;
-	std::cout << "I'm here" << std::endl;
-	return (result);
+	while (j < 8)
+		str[j++] = static_cast<char>(std::rand() % 25 + 65);
+	reinterpet = reinterpret_cast<char*>(&str);
+	j = 0;
+	while (i < 52)
+		result[i++] = reinterpet[j++];
+	return ((void*)result);
 }
 
 Data*	deserialize(void *raw)
@@ -62,8 +53,8 @@ Data*	deserialize(void *raw)
 	char*	rawdata;
 
 	rawdata = static_cast<char*>(raw);
-	data->s1 = static_cast<std::string>(rawdata);
-	//data->n = static_cast<int>(rawdata + 24);
-	data->s2 = static_cast<std::string>(rawdata + 32);
+	data->s1 = std::string(rawdata, 24);
+	data->n = *reinterpret_cast<int*>(static_cast<char*>(rawdata) + 24);
+	data->s2 = std::string(rawdata + 28, 24);
 	return (data);
 }
