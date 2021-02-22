@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/21 16:25:59 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/21 16:25:59 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/21 16:25:59 by kcedra            #+#    #+#             */
+/*   Updated: 2021/02/22 04:10:43 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Base.hpp"
+#include "A.hpp"
+#include "B.hpp"
+#include "C.hpp"
 
 int		main()
 {
@@ -19,5 +21,10 @@ int		main()
 
 	ptr = generate();
 	identify_from_pointer(ptr);
-	identify_from_reference(*ptr);
+
+	Base	&ref = *ptr;
+
+	identify_from_reference(ref);
+
+	delete ptr;
 }

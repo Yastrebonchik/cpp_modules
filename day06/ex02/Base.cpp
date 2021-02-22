@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   Base.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/21 16:13:53 by marvin            #+#    #+#             */
-/*   Updated: 2021/01/21 16:13:53 by marvin           ###   ########.fr       */
+/*   Created: 2021/01/21 16:13:53 by kcedra            #+#    #+#             */
+/*   Updated: 2021/02/22 04:14:12 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Base.hpp"
+#include "A.hpp"
+#include "B.hpp"
+#include "C.hpp"
 
-Base::Base(/* args */)
+Base::Base()
 {
 }
 
@@ -56,27 +59,7 @@ void	identify_from_pointer(Base * p)
 		std::cout << "Error occured" << std::endl;
 }
 
-void identify_from_reference( Base & p)
+void identify_from_reference(Base &p)
 {
-	try
-	{
-		dynamic_cast<A&>(p);
-		std::cout << "A" << std::endl;
-	}
-	catch(std::bad_cast& bc)
-	{}
-	try
-	{
-		dynamic_cast<B&>(p);
-		std::cout << "B" << std::endl;
-	}
-	catch(std::bad_cast& bc)
-	{}
-	try
-	{
-		dynamic_cast<C&>(p);
-		std::cout << "C" << std::endl;
-	}
-	catch(std::bad_cast& bc)
-	{}
+	identify_from_pointer(&p);
 }

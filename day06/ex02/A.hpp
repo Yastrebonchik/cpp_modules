@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Base.hpp                                           :+:      :+:    :+:   */
+/*   A.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/21 16:14:03 by kcedra            #+#    #+#             */
-/*   Updated: 2021/02/22 04:11:21 by kcedra           ###   ########.fr       */
+/*   Created: 2021/02/22 03:55:17 by kcedra            #+#    #+#             */
+/*   Updated: 2021/02/22 04:00:55 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	BASE_HPP
-# define BASE_HPP
+#ifndef	A_HPP
+# define A_HPP
 
-# include <iostream>
-# include <string>
-# include <ctime>
+#include "Base.hpp"
 
-class Base
+class A : public Base
 {
-private:
-	
-public:
-	Base();
-	virtual ~Base();
+	virtual ~A() {};
 };
-
-Base*	generate(void);
-void	identify_from_pointer(Base * p);
-void 	identify_from_reference(Base & p);
 
 #endif

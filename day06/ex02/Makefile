@@ -3,20 +3,20 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/07 17:38:03 by kcedra            #+#    #+#              #
-#    Updated: 2021/01/20 23:50:04 by marvin           ###   ########.fr        #
+#    Updated: 2021/02/22 04:02:46 by kcedra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = clang++
 
-NAME = convert
+NAME = base
 
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra -std=c++98
 
-SOURCES = convert.cpp
+SOURCES = Base.cpp main.cpp
 
 O_FILES = $(SOURCES:.cpp=.o)
 

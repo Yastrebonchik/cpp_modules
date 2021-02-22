@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 15:03:09 by kcedra            #+#    #+#             */
-/*   Updated: 2021/01/29 02:22:29 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/02/22 03:48:04 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main()
 {
 	Data	*deserialized;
 	void	*serialized;
-		
+
 	std::srand(time(0));
 
 	serialized = serialize();
@@ -26,6 +26,8 @@ int main()
 	std::cout << "Number = " << deserialized->n << std::endl;
 	std::cout << "String 2 = " << deserialized->s2 << std::endl;
 
-	std::cout << "Size of data = " << sizeof(Data) << std::endl;
+	delete reinterpret_cast<char*>(serialized);
+	delete deserialized;
+
 	return (0);
 }

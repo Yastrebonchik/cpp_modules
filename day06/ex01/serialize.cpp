@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   serialize.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alexander <alexander@student.42.fr>        +#+  +:+       +#+        */
+/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 15:00:45 by kcedra            #+#    #+#             */
-/*   Updated: 2021/02/02 02:02:10 by alexander        ###   ########.fr       */
+/*   Updated: 2021/02/22 03:49:41 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 void*	serialize(void)
 {
-	int			i;
-	int			j;
+	int			i = 0;
+	int			j = 0;
 	int			number;
 	std::string	str;
 	char*		result = new char[52];
 	char*		reinterpet;
 
-	i = 0;
-	j = 0;
 	while (j < 8)
 		str[j++]= (std::rand() % 25 + 65);
 	reinterpet = reinterpret_cast<char*>(&str);
