@@ -14,6 +14,7 @@
 # define SPAN_HPP
 
 # include <algorithm>
+# include <list>
 # include <vector>
 # include <iostream>
 
@@ -34,6 +35,13 @@ public:
 	unsigned int	shortestSpan() const;
 	unsigned int	longestSpan() const;
 	void			addNumber(int number);
+	template <typename iterator>
+	void			addNumber(iterator begin, iterator end)
+	{
+		if (this->_vector.size() + std::distance(begin, end) > this->_size)
+			throw Span::ContainerOverflowException();
+		this->_vector.insert(this->_vector.end(), begin, end);
+	};
 
 	class	NotEnoughNumbersException : public std::exception {
 		virtual const char* what() const throw();	

@@ -52,10 +52,10 @@ unsigned int	Span::shortestSpan() const
 	{
 		if (std::abs(sorted[i] - sorted[i - 1]) < shortest)
 			shortest = std::abs(sorted[i] - sorted[i - 1]);
-		std::cout << sorted[i - 1] << std::endl;
+		//std::cout << sorted[i - 1] << std::endl;
 	}
-	std::cout << sorted[sorted.size() - 1] << std::endl;
-	std::cout << "--------------" << std::endl;
+	//std::cout << sorted[sorted.size() - 1] << std::endl;
+	//std::cout << "--------------" << std::endl;
 	return (shortest);
 }
 
