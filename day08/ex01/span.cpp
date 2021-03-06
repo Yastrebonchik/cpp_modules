@@ -45,23 +45,20 @@ unsigned int	Span::shortestSpan() const
 	int					shortest = INT_MAX;
 	std::vector<int>	sorted(this->_vector);
 
-	if (this->_size <= 1)
+	if (this->_size <= 1 || this->_vector.size() <= 1)
 		throw Span::NotEnoughNumbersException();
 	std::sort(sorted.begin(), sorted.end());
 	for (size_t i = 1; i < sorted.size(); i++)
 	{
 		if (std::abs(sorted[i] - sorted[i - 1]) < shortest)
 			shortest = std::abs(sorted[i] - sorted[i - 1]);
-		//std::cout << sorted[i - 1] << std::endl;
 	}
-	//std::cout << sorted[sorted.size() - 1] << std::endl;
-	//std::cout << "--------------" << std::endl;
 	return (shortest);
 }
 
 unsigned int	Span::longestSpan() const
 {
-	if (this->_size <= 1)
+	if (this->_size <= 1 || this->_vector.size() <= 1)
 		throw Span::NotEnoughNumbersException();
 	return (*std::max_element(this->_vector.begin(), this->_vector.end()) - *std::min_element(this->_vector.begin(), this->_vector.end()));
 }
