@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 12:44:17 by kcedra            #+#    #+#             */
-/*   Updated: 2021/03/07 12:44:17 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/03/22 22:35:00 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,11 @@ private:
 
 public:
 	Calculator();
+	Calculator(Calculator const &src);
 	~Calculator();
 	void	evalExpression(char *argv);
+
+	Calculator&		operator=(Calculator const &rhs);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 21:41:55 by kcedra            #+#    #+#             */
-/*   Updated: 2021/02/05 21:41:55 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/03/22 20:29:41 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Span&			Span::operator=(const Span &rhs)
 	if (this != &rhs)
 	{
 		if (rhs.getSize() > this->_size)
-			std::cout << "Can't add more" << std::endl;
+			throw Span::ContainerOverflowException();
 		else
 		{
 			for (size_t i = 0; i < rhs._vector.size(); i++)

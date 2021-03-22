@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 01:54:42 by kcedra            #+#    #+#             */
-/*   Updated: 2021/02/06 01:54:42 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/03/22 20:46:46 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int		main()
 {
 	Span sp = Span(5);
 
-	std::cout << "What the fuck" << std::endl;
 	try
 	{
 		std::cout << sp.shortestSpan() << std::endl;
@@ -97,8 +96,19 @@ int		main()
 	lst.push_back(3);
 	lst.push_back(4);
 
+	size_t i = 0;
 	Span spexception = Span(4);
 	spexception.addNumber(lst.begin(), lst.end());
 	std::cout << spexception.longestSpan() << std::endl;
 	std::cout << spexception.shortestSpan() << std::endl;
+
+	Span bigspan = Span(100000);
+	
+	i = 5;
+	std::cout << "--------------------------------------" << std::endl;
+	while (lst.size() < 100000)
+		lst.push_back(i++);
+	bigspan.addNumber(lst.begin(), lst.end());
+	std::cout << bigspan.longestSpan() << std::endl;
+	std::cout << bigspan.shortestSpan() << std::endl;
 }

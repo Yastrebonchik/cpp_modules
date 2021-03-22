@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 12:44:20 by kcedra            #+#    #+#             */
-/*   Updated: 2021/03/07 12:44:20 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/03/22 22:39:45 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,20 @@ Calculator::Calculator() : width(5)
 {
 }
 
+Calculator::Calculator(Calculator const &src)
+{
+	*this = src;
+}
+
 Calculator::~Calculator()
 {
+}
+
+Calculator&	Calculator::operator=(Calculator const &rhs)
+{
+	if (this != &rhs)
+		this->width = rhs.width;
+	return (*this);
 }
 
 void	Calculator::getExpression(char *expr)
