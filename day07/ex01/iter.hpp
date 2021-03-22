@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 01:12:19 by kcedra            #+#    #+#             */
-/*   Updated: 2021/02/04 01:12:19 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/03/22 18:48:30 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,21 @@
 
 # include <iostream>
 # include <string>
+
+class whatever
+{
+public:
+	whatever(void) : _n(42) {}
+	int		getN() const {return (this->_n);}
+private:
+	int	_n;
+};
+
+std::ostream&	operator<<(std::ostream &out, whatever const &src) 
+{
+	out << src.getN();
+	return (out);
+};
 
 template <typename T>
 void	printarray(T const & value)

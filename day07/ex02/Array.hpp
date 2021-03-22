@@ -6,7 +6,7 @@
 /*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 17:13:18 by kcedra            #+#    #+#             */
-/*   Updated: 2021/02/04 17:13:18 by kcedra           ###   ########.fr       */
+/*   Updated: 2021/03/22 19:16:29 by kcedra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ public:
 		this->_len = 0;
 	}
 	Array(const Array &src)	{
-		this->_array = new T[src.size()];
-		this->_len = src.size();
+		this->_array = nullptr;
+		*this = src;
 	}
 	Array(unsigned int len) {
 		this->_array = new T[len];
@@ -38,7 +38,21 @@ public:
 	~Array() {
 		delete[] this->_array;
 	}
-	int	size() {
+	Array&	operator=(const Array &rhs)
+	{
+		if (this != &rhs)
+		{
+			if (this != nullptr)
+				delete[] this->_array;
+			this->_array = new T[rhs.size()];
+			this->_len = rhs.size();
+			for (int i = 0; i < rhs.size(); i++)
+				this->_array[i] = rhs._array[i];
+		}
+		return (*this);
+	}
+
+	int	size() const {
 		return (this->_len);
 	}
 	class OutOfLimitsException: public std::exception {
