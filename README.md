@@ -1,1 +1,1 @@
-In current project various tasks are presented which aim were to introduce the main principles of Object-oriented programming.
+In current project various tasks are presented the aim of which is to introduce the main principles of Object-oriented programming.
